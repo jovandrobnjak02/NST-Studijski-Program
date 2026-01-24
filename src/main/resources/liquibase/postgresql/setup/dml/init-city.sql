@@ -1,9 +1,0 @@
-insert into city(zipcode,name) values (1111,'City-1111');
-insert into city(zipcode,name) values (1112,'City-1112');
-insert into city(zipcode,name) values (1113,'City-1113');
-insert into city(zipcode,name) values (1114,'City-1114');
-insert into city(zipcode,name) values (1115,'City-1115');
-insert into city(zipcode,name) values (1116,'City-1116');
-insert into city(zipcode,name) values (1117,'City-1117');
-insert into city(zipcode,name) values (1118,'City-1118');
-insert into city(zipcode,name) values (1119,'City-1119');

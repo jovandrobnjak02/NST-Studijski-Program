@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+        http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.20.xsd">
+
+    <changeSet id="create-studijski-program-schema" author="codex">
+        <createTable tableName="studijski_program">
+            <column name="sifra" type="varchar(20)">
+                <constraints primaryKey="true" nullable="false"/>
+            </column>
+            <column name="naziv" type="varchar(255)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="stepen" type="varchar(20)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="ukupno_espb" type="int">
+                <constraints nullable="false"/>
+            </column>
+        </createTable>
+
+        <createTable tableName="modul">
+            <column name="id" type="bigint" autoIncrement="true">
+                <constraints primaryKey="true" nullable="false"/>
+            </column>
+            <column name="naziv" type="varchar(255)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="oznaka" type="varchar(50)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="godina" type="int">
+                <constraints nullable="false"/>
+            </column>
+            <column name="studijski_program_sifra" type="varchar(20)">
+                <constraints nullable="false"/>
+            </column>
+        </createTable>
+
+        <createTable tableName="predmet">
+            <column name="sifra" type="varchar(20)">
+                <constraints primaryKey="true" nullable="false"/>
+            </column>
+            <column name="naziv" type="varchar(255)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="espb" type="int">
+                <constraints nullable="false"/>
+            </column>
+            <column name="predavanja" type="int">
+                <constraints nullable="false"/>
+            </column>
+            <column name="vezbe" type="int">
+                <constraints nullable="false"/>
+            </column>
+            <column name="praktikum" type="int">
+                <constraints nullable="false"/>
+            </column>
+        </createTable>
+
+        <createTable tableName="izborna_grupa">
+            <column name="id" type="bigint" autoIncrement="true">
+                <constraints primaryKey="true" nullable="false"/>
+            </column>
+            <column name="naziv" type="varchar(255)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="min_izbor" type="int">
+                <constraints nullable="false"/>
+            </column>
+            <column name="max_izbor" type="int">
+                <constraints nullable="false"/>
+            </column>
+            <column name="min_espb" type="int">
+                <constraints nullable="false"/>
+            </column>
+            <column name="max_espb" type="int">
+                <constraints nullable="false"/>
+            </column>
+        </createTable>
+
+        <createTable tableName="plan_stavka">
+            <column name="id" type="bigint" autoIncrement="true">
+                <constraints primaryKey="true" nullable="false"/>
+            </column>
+            <column name="semestar" type="int">
+                <constraints nullable="false"/>
+            </column>
+            <column name="tip" type="varchar(20)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="aktivan" type="boolean">
+                <constraints nullable="false"/>
+            </column>
+            <column name="modul_id" type="bigint">
+                <constraints nullable="false"/>
+            </column>
+            <column name="predmet_sifra" type="varchar(20)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="izborna_grupa_id" type="bigint">
+                <constraints nullable="true"/>
+            </column>
+        </createTable>
+
+        <createTable tableName="preduslov">
+            <column name="id" type="bigint" autoIncrement="true">
+                <constraints primaryKey="true" nullable="false"/>
+            </column>
+            <column name="tip" type="varchar(50)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="uslovni_predmet_sifra" type="varchar(20)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="ciljni_predmet_sifra" type="varchar(20)">
+                <constraints nullable="false"/>
+            </column>
+        </createTable>
+
+        <addForeignKeyConstraint baseTableName="modul"
+                                 baseColumnNames="studijski_program_sifra"
+                                 referencedTableName="studijski_program"
+                                 referencedColumnNames="sifra"
+                                 constraintName="fk_modul_studijski_program"/>
+
+        <addForeignKeyConstraint baseTableName="plan_stavka"
+                                 baseColumnNames="modul_id"
+                                 referencedTableName="modul"
+                                 referencedColumnNames="id"
+                                 constraintName="fk_plan_stavka_modul"/>
+
+        <addForeignKeyConstraint baseTableName="plan_stavka"
+                                 baseColumnNames="predmet_sifra"
+                                 referencedTableName="predmet"
+                                 referencedColumnNames="sifra"
+                                 constraintName="fk_plan_stavka_predmet"/>
+
+        <addForeignKeyConstraint baseTableName="plan_stavka"
+                                 baseColumnNames="izborna_grupa_id"
+                                 referencedTableName="izborna_grupa"
+                                 referencedColumnNames="id"
+                                 constraintName="fk_plan_stavka_izborna_grupa"/>
+
+        <addForeignKeyConstraint baseTableName="preduslov"
+                                 baseColumnNames="uslovni_predmet_sifra"
+                                 referencedTableName="predmet"
+                                 referencedColumnNames="sifra"
+                                 constraintName="fk_preduslov_uslovni_predmet"/>
+
+        <addForeignKeyConstraint baseTableName="preduslov"
+                                 baseColumnNames="ciljni_predmet_sifra"
+                                 referencedTableName="predmet"
+                                 referencedColumnNames="sifra"
+                                 constraintName="fk_preduslov_ciljni_predmet"/>
+
+        <createIndex tableName="modul" indexName="idx_modul_studijski_program">
+            <column name="studijski_program_sifra"/>
+        </createIndex>
+        <createIndex tableName="plan_stavka" indexName="idx_plan_stavka_modul">
+            <column name="modul_id"/>
+        </createIndex>
+        <createIndex tableName="plan_stavka" indexName="idx_plan_stavka_predmet">
+            <column name="predmet_sifra"/>
+        </createIndex>
+        <createIndex tableName="plan_stavka" indexName="idx_plan_stavka_izborna_grupa">
+            <column name="izborna_grupa_id"/>
+        </createIndex>
+        <createIndex tableName="preduslov" indexName="idx_preduslov_uslovni_predmet">
+            <column name="uslovni_predmet_sifra"/>
+        </createIndex>
+        <createIndex tableName="preduslov" indexName="idx_preduslov_ciljni_predmet">
+            <column name="ciljni_predmet_sifra"/>
+        </createIndex>
+    </changeSet>
+</databaseChangeLog>

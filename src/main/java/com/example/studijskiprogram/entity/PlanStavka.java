@@ -20,9 +20,6 @@ public class PlanStavka {
     private Long id;
 
     @Column(nullable = false)
-    private int godina;
-
-    @Column(nullable = false)
     private int semestar;
 
     @Enumerated(EnumType.STRING)
@@ -52,14 +49,6 @@ public class PlanStavka {
 
     public void setId(Long id) {
         this.id = id;
-    }
-
-    public int getGodina() {
-        return godina;
-    }
-
-    public void setGodina(int godina) {
-        this.godina = godina;
     }
 
     public int getSemestar() {

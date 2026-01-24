@@ -24,8 +24,11 @@ public class Modul {
     @Column(nullable = false)
     private String naziv;
 
-    @Column(nullable = false)
+    @Column(nullable = false, length = 50)
     private String oznaka;
+
+    @Column(nullable = false)
+    private int godina;
 
     @ManyToOne(optional = false)
     @JoinColumn(name = "studijski_program_sifra", nullable = false)
@@ -57,6 +60,14 @@ public class Modul {
 
     public void setOznaka(String oznaka) {
         this.oznaka = oznaka;
+    }
+
+    public int getGodina() {
+        return godina;
+    }
+
+    public void setGodina(int godina) {
+        this.godina = godina;
     }
 
     public StudijskiProgram getStudijskiProgram() {
