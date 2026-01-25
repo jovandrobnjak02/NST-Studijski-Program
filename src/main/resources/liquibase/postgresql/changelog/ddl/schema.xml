@@ -73,13 +73,23 @@
             <column name="max_izbor" type="int">
                 <constraints nullable="false"/>
             </column>
-            <column name="min_espb" type="int">
-                <constraints nullable="false"/>
-            </column>
-            <column name="max_espb" type="int">
+            <column name="espb" type="int">
                 <constraints nullable="false"/>
             </column>
         </createTable>
+
+        <createTable tableName="izborna_grupa_predmet">
+            <column name="izborna_grupa_id" type="bigint">
+                <constraints nullable="false"/>
+            </column>
+            <column name="predmet_sifra" type="varchar(20)">
+                <constraints nullable="false"/>
+            </column>
+        </createTable>
+
+        <addPrimaryKey tableName="izborna_grupa_predmet"
+                       columnNames="izborna_grupa_id, predmet_sifra"
+                       constraintName="pk_izborna_grupa_predmet"/>
 
         <createTable tableName="plan_stavka">
             <column name="id" type="bigint" autoIncrement="true">
@@ -98,7 +108,7 @@
                 <constraints nullable="false"/>
             </column>
             <column name="predmet_sifra" type="varchar(20)">
-                <constraints nullable="false"/>
+                <constraints nullable="true"/>
             </column>
             <column name="izborna_grupa_id" type="bigint">
                 <constraints nullable="true"/>
@@ -138,6 +148,18 @@
                                  referencedColumnNames="sifra"
                                  constraintName="fk_plan_stavka_predmet"/>
 
+        <addForeignKeyConstraint baseTableName="izborna_grupa_predmet"
+                                 baseColumnNames="izborna_grupa_id"
+                                 referencedTableName="izborna_grupa"
+                                 referencedColumnNames="id"
+                                 constraintName="fk_izborna_grupa_predmet_grupa"/>
+
+        <addForeignKeyConstraint baseTableName="izborna_grupa_predmet"
+                                 baseColumnNames="predmet_sifra"
+                                 referencedTableName="predmet"
+                                 referencedColumnNames="sifra"
+                                 constraintName="fk_izborna_grupa_predmet_predmet"/>
+
         <addForeignKeyConstraint baseTableName="plan_stavka"
                                  baseColumnNames="izborna_grupa_id"
                                  referencedTableName="izborna_grupa"
@@ -167,6 +189,12 @@
         </createIndex>
         <createIndex tableName="plan_stavka" indexName="idx_plan_stavka_izborna_grupa">
             <column name="izborna_grupa_id"/>
+        </createIndex>
+        <createIndex tableName="izborna_grupa_predmet" indexName="idx_izborna_grupa_predmet_grupa">
+            <column name="izborna_grupa_id"/>
+        </createIndex>
+        <createIndex tableName="izborna_grupa_predmet" indexName="idx_izborna_grupa_predmet_predmet">
+            <column name="predmet_sifra"/>
         </createIndex>
         <createIndex tableName="preduslov" indexName="idx_preduslov_uslovni_predmet">
             <column name="uslovni_predmet_sifra"/>

@@ -34,8 +34,8 @@ public class PlanStavka {
     @JsonIgnore
     private Modul modul;
 
-    @ManyToOne(optional = false)
-    @JoinColumn(name = "predmet_sifra", nullable = false)
+    @ManyToOne
+    @JoinColumn(name = "predmet_sifra")
     private Predmet predmet;
 
     @ManyToOne

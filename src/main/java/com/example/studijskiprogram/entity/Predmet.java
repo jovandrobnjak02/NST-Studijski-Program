@@ -1,9 +1,13 @@
 package com.example.studijskiprogram.entity;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
+import jakarta.persistence.ManyToMany;
 import jakarta.persistence.Table;
+import java.util.HashSet;
+import java.util.Set;
 
 @Entity
 @Table(name = "predmet")
@@ -26,6 +30,10 @@ public class Predmet {
 
     @Column(nullable = false)
     private int praktikum;
+
+    @ManyToMany(mappedBy = "predmeti")
+    @JsonIgnore
+    private Set<IzbornaGrupa> izborneGrupe = new HashSet<>();
 
     public String getSifra() {
         return sifra;
@@ -73,5 +81,13 @@ public class Predmet {
 
     public void setPraktikum(int praktikum) {
         this.praktikum = praktikum;
+    }
+
+    public Set<IzbornaGrupa> getIzborneGrupe() {
+        return izborneGrupe;
+    }
+
+    public void setIzborneGrupe(Set<IzbornaGrupa> izborneGrupe) {
+        this.izborneGrupe = izborneGrupe;
     }
 }

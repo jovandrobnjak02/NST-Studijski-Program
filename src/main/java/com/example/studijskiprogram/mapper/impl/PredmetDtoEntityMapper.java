@@ -6,7 +6,7 @@ import com.example.studijskiprogram.entity.Predmet;
 import com.example.studijskiprogram.mapper.DtoEntityMapper;
 
 @Component
-public class PredmetDtoMapper implements DtoEntityMapper< PredmetDto, Predmet> {
+public class PredmetDtoEntityMapper implements DtoEntityMapper< PredmetDto, Predmet> {
 
     @Override
     public PredmetDto toDto(Predmet entity) {
