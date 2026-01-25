@@ -1,20 +1,24 @@
 package com.example.studijskiprogram.dto;
 
+import java.util.List;
+
 public class ModulDto {
 
     private Long id;
     private String naziv;
     private String oznaka;
     private int godina;
+    private List<PlanStavkaDto> planStavke;
 
     public ModulDto() {
     }
 
-    public ModulDto(Long id, String naziv, String oznaka, int godina) {
+    public ModulDto(Long id, String naziv, String oznaka, int godina, List<PlanStavkaDto> planStavke) {
         this.id = id;
         this.naziv = naziv;
         this.oznaka = oznaka;
         this.godina = godina;
+        this.planStavke = planStavke;
     }
 
     public Long getId() {
@@ -47,5 +51,13 @@ public class ModulDto {
 
     public void setGodina(int godina) {
         this.godina = godina;
+    }
+
+    public List<PlanStavkaDto> getPlanStavke() {
+        return planStavke;
+    }
+
+    public void setPlanStavke(List<PlanStavkaDto> planStavke) {
+        this.planStavke = planStavke;
     }
 }

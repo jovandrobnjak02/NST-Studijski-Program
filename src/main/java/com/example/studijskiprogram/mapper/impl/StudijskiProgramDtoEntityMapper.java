@@ -41,19 +41,19 @@ public class StudijskiProgramDtoEntityMapper implements DtoEntityMapper<Studijsk
         if (dto == null) {
             return null;
         }
-        StudijskiProgram entity = new StudijskiProgram();
-        entity.setSifra(dto.getSifra());
-        entity.setNaziv(dto.getNaziv());
-        entity.setStepen(dto.getStepen());
-        entity.setUkupnoEspb(dto.getUkupnoEspb());
         List<Modul> moduli = new ArrayList<>();
+        StudijskiProgram entity = new StudijskiProgram(
+                dto.getSifra(),
+                dto.getNaziv(),
+                dto.getStepen(),
+                dto.getUkupnoEspb(),
+                moduli
+        );
         if (dto.getModuli() != null) {
             for (ModulDto modulDto : dto.getModuli()) {
-                Modul modul = modulDtoEntityMapper.toEntity(modulDto, entity);
-                moduli.add(modul);
+                moduli.add(modulDtoEntityMapper.toEntity(modulDto, entity));
             }
         }
-        entity.setModuli(moduli);
         return entity;
     }
 }

@@ -51,6 +51,14 @@ public class IzbornaGrupa {
         this.planStavke = planStavke;
     }
 
+    public IzbornaGrupa(Long id, int potrebniEspb, int brojPredmeta, List<PlanStavka> planStavke, Set<Predmet> predmeti) {
+        this.id = id;
+        this.potrebniEspb = potrebniEspb;
+        this.brojPredmeta = brojPredmeta;
+        this.planStavke = planStavke;
+        this.predmeti = predmeti;
+    }
+
     public Long getId() {
         return id;
     }

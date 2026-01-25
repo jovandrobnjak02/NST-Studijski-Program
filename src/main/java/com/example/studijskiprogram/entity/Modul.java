@@ -41,7 +41,8 @@ public class Modul {
     public Modul() {
     }
 
-    public Modul(String naziv, String oznaka, int godina, StudijskiProgram studijskiProgram, List<PlanStavka> planStavke) {
+    public Modul(Long id, String naziv, String oznaka, int godina, StudijskiProgram studijskiProgram, List<PlanStavka> planStavke) {
+        this.id = id;
         this.naziv = naziv;
         this.oznaka = oznaka;
         this.godina = godina;
