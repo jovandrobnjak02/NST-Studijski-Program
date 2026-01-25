@@ -27,6 +27,16 @@ public class Preduslov {
     @JoinColumn(name = "ciljni_predmet_sifra", nullable = false)
     private Predmet ciljniPredmet;
 
+    public Preduslov() {
+    }
+
+    public Preduslov(Long id, String tip, Predmet uslovniPredmet, Predmet ciljniPredmet) {
+        this.id = id;
+        this.tip = tip;
+        this.uslovniPredmet = uslovniPredmet;
+        this.ciljniPredmet = ciljniPredmet;
+    }
+
     public Long getId() {
         return id;
     }

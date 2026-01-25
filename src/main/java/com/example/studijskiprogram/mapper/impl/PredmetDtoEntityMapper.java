@@ -9,18 +9,18 @@ import com.example.studijskiprogram.mapper.DtoEntityMapper;
 public class PredmetDtoEntityMapper implements DtoEntityMapper< PredmetDto, Predmet> {
 
     @Override
-    public PredmetDto toDto(Predmet entity) {
+    public PredmetDto toDto(Predmet entity){
         if (entity == null) {
             return null;
         }
-        PredmetDto dto = new PredmetDto();
-        dto.setSifra(entity.getSifra());
-        dto.setNaziv(entity.getNaziv());
-        dto.setEspb(entity.getEspb());
-        dto.setPredavanja(entity.getPredavanja());
-        dto.setVezbe(entity.getVezbe());
-        dto.setPraktikum(entity.getPraktikum());
-        return dto;
+        return new PredmetDto(
+            entity.getSifra(),
+            entity.getNaziv(),
+            entity.getEspb(),
+            entity.getPredavanja(),
+            entity.getVezbe(),
+            entity.getPraktikum()
+        );
     }
 
     @Override
@@ -28,14 +28,14 @@ public class PredmetDtoEntityMapper implements DtoEntityMapper< PredmetDto, Pred
         if (dto == null) {
             return null;
         }
-        Predmet entity = new Predmet();
-        entity.setSifra(dto.getSifra());
-        entity.setNaziv(dto.getNaziv());
-        entity.setEspb(dto.getEspb());
-        entity.setPredavanja(dto.getPredavanja());
-        entity.setVezbe(dto.getVezbe());
-        entity.setPraktikum(dto.getPraktikum());
-        return entity;
+        return new Predmet(
+            dto.getSifra(),
+            dto.getNaziv(),
+            dto.getEspb(),
+            dto.getPredavanja(),
+            dto.getVezbe(),
+            dto.getPraktikum()
+        );
     }
     
 }

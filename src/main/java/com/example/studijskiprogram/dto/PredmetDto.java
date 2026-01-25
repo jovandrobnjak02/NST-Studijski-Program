@@ -9,6 +9,7 @@ public class PredmetDto {
     private int predavanja;
     private int vezbe;
     private int praktikum;
+    
 
     
     public PredmetDto() {

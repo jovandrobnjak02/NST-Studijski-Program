@@ -35,6 +35,18 @@ public class Predmet {
     @JsonIgnore
     private Set<IzbornaGrupa> izborneGrupe = new HashSet<>();
 
+    public Predmet() {
+    }
+
+    public Predmet(String sifra, String naziv, int espb, int predavanja, int vezbe, int praktikum) {
+        this.sifra = sifra;
+        this.naziv = naziv;
+        this.espb = espb;
+        this.predavanja = predavanja;
+        this.vezbe = vezbe;
+        this.praktikum = praktikum;
+    }
+
     public String getSifra() {
         return sifra;
     }
@@ -90,4 +102,5 @@ public class Predmet {
     public void setIzborneGrupe(Set<IzbornaGrupa> izborneGrupe) {
         this.izborneGrupe = izborneGrupe;
     }
+
 }

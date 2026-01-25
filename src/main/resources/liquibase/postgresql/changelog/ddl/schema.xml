@@ -64,16 +64,10 @@
             <column name="id" type="bigint" autoIncrement="true">
                 <constraints primaryKey="true" nullable="false"/>
             </column>
-            <column name="naziv" type="varchar(255)">
+            <column name="potrebni_espb" type="int">
                 <constraints nullable="false"/>
             </column>
-            <column name="min_izbor" type="int">
-                <constraints nullable="false"/>
-            </column>
-            <column name="max_izbor" type="int">
-                <constraints nullable="false"/>
-            </column>
-            <column name="espb" type="int">
+            <column name="broj_predmeta" type="int">
                 <constraints nullable="false"/>
             </column>
         </createTable>

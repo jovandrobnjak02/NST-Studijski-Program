@@ -38,6 +38,17 @@ public class Modul {
     @OneToMany(mappedBy = "modul", cascade = CascadeType.ALL, orphanRemoval = true)
     private List<PlanStavka> planStavke = new ArrayList<>();
 
+    public Modul() {
+    }
+
+    public Modul(String naziv, String oznaka, int godina, StudijskiProgram studijskiProgram, List<PlanStavka> planStavke) {
+        this.naziv = naziv;
+        this.oznaka = oznaka;
+        this.godina = godina;
+        this.studijskiProgram = studijskiProgram;
+        this.planStavke = planStavke;
+    }
+
     public Long getId() {
         return id;
     }

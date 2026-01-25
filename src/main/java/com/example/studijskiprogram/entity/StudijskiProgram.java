@@ -31,6 +31,17 @@ public class StudijskiProgram {
     @OneToMany(mappedBy = "studijskiProgram", cascade = CascadeType.ALL, orphanRemoval = true)
     private List<Modul> moduli = new ArrayList<>();
 
+    public StudijskiProgram() {
+    }
+
+    public StudijskiProgram(String sifra, String naziv, StudijskiProgramStepen stepen, int ukupnoEspb, List<Modul> moduli) {
+        this.sifra = sifra;
+        this.naziv = naziv;
+        this.stepen = stepen;
+        this.ukupnoEspb = ukupnoEspb;
+        this.moduli = moduli;
+    }
+
     public String getSifra() {
         return sifra;
     }

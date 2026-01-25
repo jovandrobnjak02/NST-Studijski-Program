@@ -23,17 +23,11 @@ public class IzbornaGrupa {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @Column(nullable = false)
-    private String naziv;
+    @Column(name = "potrebni_espb", nullable = false)
+    private int potrebniEspb;
 
-    @Column(name = "min_izbor", nullable = false)
-    private int minIzbor;
-
-    @Column(name = "max_izbor", nullable = false)
-    private int maxIzbor;
-
-    @Column(nullable = false)
-    private int espb;
+    @Column(name = "broj_predmeta", nullable = false)
+    private int brojPredmeta;
 
     @OneToMany(mappedBy = "izbornaGrupa")
     private List<PlanStavka> planStavke = new ArrayList<>();
@@ -47,6 +41,16 @@ public class IzbornaGrupa {
     @JsonIgnore
     private Set<Predmet> predmeti = new HashSet<>();
 
+    public IzbornaGrupa() {
+    }
+
+    public IzbornaGrupa(Long id, int potrebniEspb, int brojPredmeta, List<PlanStavka> planStavke) {
+        this.id = id;
+        this.potrebniEspb = potrebniEspb;
+        this.brojPredmeta = brojPredmeta;
+        this.planStavke = planStavke;
+    }
+
     public Long getId() {
         return id;
     }
@@ -55,36 +59,20 @@ public class IzbornaGrupa {
         this.id = id;
     }
 
-    public String getNaziv() {
-        return naziv;
+    public int getPotrebniEspb() {
+        return potrebniEspb;
     }
 
-    public void setNaziv(String naziv) {
-        this.naziv = naziv;
+    public void setPotrebniEspb(int potrebniEspb) {
+        this.potrebniEspb = potrebniEspb;
     }
 
-    public int getMinIzbor() {
-        return minIzbor;
+    public int getBrojPredmeta() {
+        return brojPredmeta;
     }
 
-    public void setMinIzbor(int minIzbor) {
-        this.minIzbor = minIzbor;
-    }
-
-    public int getMaxIzbor() {
-        return maxIzbor;
-    }
-
-    public void setMaxIzbor(int maxIzbor) {
-        this.maxIzbor = maxIzbor;
-    }
-
-    public int getEspb() {
-        return espb;
-    }
-
-    public void setEspb(int espb) {
-        this.espb = espb;
+    public void setBrojPredmeta(int brojPredmeta) {
+        this.brojPredmeta = brojPredmeta;
     }
 
     public List<PlanStavka> getPlanStavke() {
@@ -102,4 +90,5 @@ public class IzbornaGrupa {
     public void setPredmeti(Set<Predmet> predmeti) {
         this.predmeti = predmeti;
     }
+
 }

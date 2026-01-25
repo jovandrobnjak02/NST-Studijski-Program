@@ -43,6 +43,19 @@ public class PlanStavka {
     @JsonIgnore
     private IzbornaGrupa izbornaGrupa;
 
+    public PlanStavka() {
+    }
+
+    public PlanStavka(Long id, int semestar, PlanStavkaTip tip, boolean aktivan, Modul modul, Predmet predmet, IzbornaGrupa izbornaGrupa) {
+        this.id = id;
+        this.semestar = semestar;
+        this.tip = tip;
+        this.aktivan = aktivan;
+        this.modul = modul;
+        this.predmet = predmet;
+        this.izbornaGrupa = izbornaGrupa;
+    }
+
     public Long getId() {
         return id;
     }
