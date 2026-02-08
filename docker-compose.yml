@@ -27,6 +27,13 @@ services:
       SPRING_DATASOURCE_PASSWORD: postgres
     ports:
       - "8080:8080"
+  frontend:
+    build: ./front_end
+    container_name: studijski_program_frontend
+    depends_on:
+      - app
+    ports:
+      - "8081:80"
 
 volumes:
   studijski_program_db_data:
