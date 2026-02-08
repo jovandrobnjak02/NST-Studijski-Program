@@ -1,4 +1,3 @@
-const apiConfig = document.getElementById("apiConfig");
 const subjectList = document.getElementById("subjectList");
 const filterInput = document.getElementById("filter");
 const moduleForm = document.getElementById("moduleForm");
@@ -8,8 +7,6 @@ const resetButton = document.getElementById("resetButton");
 const saveStatus = document.getElementById("saveStatus");
 const saveError = document.getElementById("saveError");
 const programForm = document.getElementById("programForm");
-
-renderApiBaseControls(apiConfig);
 
 let subjects = [];
 let modules = [];
@@ -50,7 +47,7 @@ function renderSubjects() {
   });
 
   if (!visible.length) {
-    subjectList.innerHTML = "<div class=\"notice\">No subjects match.</div>";
+    subjectList.innerHTML = "<div class=\"notice\">Nema predmeta po filteru.</div>";
     return;
   }
 
@@ -106,7 +103,7 @@ function renderModules() {
       <div class="inline">
         <span class="tag">${module.oznaka}</span>
         <span class="tag">Godina ${module.godina}</span>
-        <button class="danger small" data-remove-module="${module.id}">Remove module</button>
+        <button class="danger small" data-remove-module="${module.id}">Ukloni modul</button>
       </div>
     `;
     card.appendChild(header);
@@ -123,7 +120,7 @@ function renderModules() {
     `;
 
     const obavezniDrop = createDropzone({
-      label: "Prevuci predmet ovde",
+      label: "Prevuci predmet ovdje",
       onDrop: sifra => addObavezni(module.id, sifra)
     });
 
@@ -145,7 +142,7 @@ function renderModules() {
           <div class="inline">
             <label class="label">Semestar</label>
             <input type="number" min="1" max="8" value="${item.semestar}" data-plan-semestar="${item.id}" />
-            <button class="danger small" data-remove-plan="${item.id}">Remove</button>
+            <button class="danger small" data-remove-plan="${item.id}">Ukloni</button>
           </div>
         `;
         obavezniList.appendChild(row);
@@ -178,7 +175,7 @@ function renderModules() {
         <label class="label">Broj predmeta</label>
         <input type="number" min="1" name="broj" required />
       </div>
-      <button type="submit">Add izborna grupa</button>
+      <button type="submit">Dodaj izbornu grupu</button>
     `;
 
     groupForm.addEventListener("submit", event => {
@@ -213,7 +210,7 @@ function renderModules() {
             <span class="tag">Semestar ${item.semestar}</span>
             <span class="tag">ESPB ${item.izbornaGrupa.potrebniEspb}</span>
             <span class="tag">Broj predmeta ${item.izbornaGrupa.brojPredmeta}</span>
-            <button class="danger small" data-remove-plan="${item.id}">Remove</button>
+            <button class="danger small" data-remove-plan="${item.id}">Ukloni</button>
           </div>
         `;
 
@@ -236,7 +233,7 @@ function renderModules() {
                 <div><strong>${subject ? subject.naziv : sifra}</strong></div>
                 <div>${sifra} - ${subject ? subject.espb : ""} ESPB</div>
               </div>
-              <button class="danger small" data-remove-group-item="${item.id}" data-sifra="${sifra}">Remove</button>
+              <button class="danger small" data-remove-group-item="${item.id}" data-sifra="${sifra}">Ukloni</button>
             `;
             list.appendChild(row);
           });
@@ -452,13 +449,13 @@ saveButton.addEventListener("click", async () => {
     showError("Dodaj bar jedan modul.");
     return;
   }
-  showStatus("Creating program...");
+  showStatus("Kreiranje programa...");
   try {
     const created = await apiFetch("/api/studijski-programi", {
       method: "POST",
       body: JSON.stringify(payload)
     });
-    showStatus("Created successfully.");
+    showStatus("Uspjesno kreirano.");
     if (created && created.sifra) {
       window.location.href = `details.html?sifra=${encodeURIComponent(created.sifra)}`;
     }

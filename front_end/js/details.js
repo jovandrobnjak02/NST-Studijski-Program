@@ -1,4 +1,3 @@
-const apiConfig = document.getElementById("apiConfig");
 const updateForm = document.getElementById("updateForm");
 const updateStatus = document.getElementById("updateStatus");
 const updateError = document.getElementById("updateError");
@@ -8,8 +7,6 @@ const sifraInput = document.getElementById("sifra");
 const nazivInput = document.getElementById("naziv");
 const stepenInput = document.getElementById("stepen");
 const ukupnoEspbInput = document.getElementById("ukupnoEspb");
-
-renderApiBaseControls(apiConfig);
 
 let currentProgram = null;
 
@@ -34,7 +31,7 @@ function clearError() {
 function renderModules(moduli = []) {
   modulesEl.innerHTML = "";
   if (!moduli.length) {
-    modulesEl.innerHTML = "<div class=\"notice\">No modules attached.</div>";
+    modulesEl.innerHTML = "<div class=\"notice\">Nema modula.</div>";
     return;
   }
 
@@ -110,7 +107,7 @@ async function loadProgram() {
   clearStatus();
   const sifra = qs("sifra");
   if (!sifra) {
-    showError("Missing sifra in query string.");
+    showError("Nedostaje sifra u URL-u.");
     return;
   }
   try {
@@ -128,7 +125,7 @@ updateForm.addEventListener("submit", async event => {
     return;
   }
   clearError();
-  showStatus("Saving update...");
+  showStatus("Cuvanje izmjena...");
 
   const payload = {
     ...currentProgram,
@@ -145,7 +142,7 @@ updateForm.addEventListener("submit", async event => {
     currentProgram = updated;
     fillForm(updated);
     renderModules(updated.moduli || []);
-    showStatus("Updated successfully.");
+    showStatus("Uspjesno azurirano.");
   } catch (err) {
     clearStatus();
     showError(formatError(err));
@@ -156,7 +153,7 @@ deleteButton.addEventListener("click", async () => {
   if (!currentProgram) {
     return;
   }
-  if (!confirm(`Delete program ${currentProgram.sifra}?`)) {
+  if (!confirm(`Obrisi program ${currentProgram.sifra}?`)) {
     return;
   }
   try {

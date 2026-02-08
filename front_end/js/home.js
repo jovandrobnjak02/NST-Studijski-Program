@@ -2,10 +2,6 @@ const listEl = document.getElementById("list");
 const statusEl = document.getElementById("status");
 const errorEl = document.getElementById("error");
 const refreshButton = document.getElementById("refreshButton");
-const apiConfig = document.getElementById("apiConfig");
-
-renderApiBaseControls(apiConfig);
-
 function showStatus(message) {
   statusEl.textContent = message;
   statusEl.style.display = "block";
@@ -27,7 +23,7 @@ function clearError() {
 function renderList(programs) {
   listEl.innerHTML = "";
   if (!programs.length) {
-    showStatus("No programs found.");
+    showStatus("Nema programa.");
     return;
   }
   clearStatus();
@@ -48,8 +44,8 @@ function renderList(programs) {
     const actions = document.createElement("div");
     actions.className = "inline";
     actions.innerHTML = `
-      <a href="details.html?sifra=${encodeURIComponent(program.sifra)}" class="secondary">Details</a>
-      <button class="danger small" data-sifra="${program.sifra}">Delete</button>
+      <a href="details.html?sifra=${encodeURIComponent(program.sifra)}" class="secondary">Detalji</a>
+      <button class="danger small" data-sifra="${program.sifra}">Obrisi</button>
     `;
 
     row.appendChild(info);
@@ -60,7 +56,7 @@ function renderList(programs) {
   listEl.querySelectorAll("button[data-sifra]").forEach(button => {
     button.addEventListener("click", async () => {
       const sifra = button.getAttribute("data-sifra");
-      if (!confirm(`Delete program ${sifra}?`)) {
+      if (!confirm(`Obrisi program ${sifra}?`)) {
         return;
       }
       try {
@@ -77,7 +73,7 @@ function renderList(programs) {
 
 async function loadPrograms() {
   clearError();
-  showStatus("Loading programs...");
+  showStatus("Ucitavanje programa...");
   try {
     const programs = await apiFetch("/api/studijski-programi");
     renderList(programs || []);

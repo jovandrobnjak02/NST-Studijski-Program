@@ -1,9 +1,9 @@
 <!doctype html>
-<html lang="en">
+<html lang="sr">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Studijski Program Details</title>
+    <title>Detalji studijskog programa</title>
     <link rel="stylesheet" href="css/app.css" />
   </head>
   <body>
@@ -12,11 +12,10 @@
       <p>Pregled modula, plan stavki i uredjivanje osnovnih polja.</p>
     </header>
     <nav>
-      <a href="index.html">Home</a>
-      <a href="create.html">Create program</a>
+      <a href="index.html">Pocetna</a>
+      <a href="create.html">Kreiraj program</a>
     </nav>
     <main>
-      <section class="card" id="apiConfig"></section>
       <section class="card">
         <h2>Osnovne informacije</h2>
         <form id="updateForm" class="grid two">
@@ -41,8 +40,8 @@
             <input id="ukupnoEspb" name="ukupnoEspb" type="number" min="0" required />
           </div>
           <div class="inline">
-            <button type="submit">Save update</button>
-            <button type="button" id="deleteButton" class="danger">Delete program</button>
+            <button type="submit">Sacuvaj izmjene</button>
+            <button type="button" id="deleteButton" class="danger">Obrisi program</button>
           </div>
         </form>
         <div id="updateStatus" class="notice" style="display: none;"></div>
