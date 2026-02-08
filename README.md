@@ -8,6 +8,9 @@ Projekat je Spring Boot backend za upravljanje studijskim programima, modulima i
 - Docker: `docker compose up --build`
 
 Swagger UI: `http://localhost:8080/test-ui.html`
+Frontend UI: `http://localhost:8081`
+
+Frontend se nalazi u `front_end` folderu kao staticki HTML/CSS/JS, serviran preko Nginx. Nginx prosledjuje ` /api ` pozive na backend, tako da UI radi bez dodatnog CORS podesavanja.
 
 ## Funkcionalnosti
 

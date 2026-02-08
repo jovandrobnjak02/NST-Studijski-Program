@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Studijski Program Details</title>
+    <link rel="stylesheet" href="css/app.css" />
+  </head>
+  <body>
+    <header>
+      <h1>Detalji studijskog programa</h1>
+      <p>Pregled modula, plan stavki i uredjivanje osnovnih polja.</p>
+    </header>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="create.html">Create program</a>
+    </nav>
+    <main>
+      <section class="card" id="apiConfig"></section>
+      <section class="card">
+        <h2>Osnovne informacije</h2>
+        <form id="updateForm" class="grid two">
+          <div>
+            <label class="label" for="sifra">Sifra</label>
+            <input id="sifra" name="sifra" type="text" readonly />
+          </div>
+          <div>
+            <label class="label" for="naziv">Naziv</label>
+            <input id="naziv" name="naziv" type="text" required />
+          </div>
+          <div>
+            <label class="label" for="stepen">Stepen</label>
+            <select id="stepen" name="stepen">
+              <option value="OSNOVNE">OSNOVNE</option>
+              <option value="MASTER">MASTER</option>
+              <option value="DOKTORSKE">DOKTORSKE</option>
+            </select>
+          </div>
+          <div>
+            <label class="label" for="ukupnoEspb">Ukupno ESPB</label>
+            <input id="ukupnoEspb" name="ukupnoEspb" type="number" min="0" required />
+          </div>
+          <div class="inline">
+            <button type="submit">Save update</button>
+            <button type="button" id="deleteButton" class="danger">Delete program</button>
+          </div>
+        </form>
+        <div id="updateStatus" class="notice" style="display: none;"></div>
+        <div id="updateError" class="error" style="display: none;"></div>
+      </section>
+      <section class="card">
+        <h2>Moduli i plan</h2>
+        <div id="modules" class="grid"></div>
+      </section>
+    </main>
+
+    <script src="js/shared.js"></script>
+    <script src="js/details.js"></script>
+  </body>
+</html>

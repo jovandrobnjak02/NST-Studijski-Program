@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Create Studijski Program</title>
+    <link rel="stylesheet" href="css/app.css" />
+  </head>
+  <body>
+    <header>
+      <h1>Kreiraj studijski program</h1>
+      <p>Dodaj module, plan stavke i izborne grupe uz drag & drop predmeta.</p>
+    </header>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="create.html">Create program</a>
+    </nav>
+    <main>
+      <section class="card" id="apiConfig"></section>
+      <section class="card">
+        <h2>Osnovni podaci</h2>
+        <form id="programForm" class="grid two">
+          <div>
+            <label class="label" for="sifra">Sifra</label>
+            <input id="sifra" name="sifra" type="text" required />
+          </div>
+          <div>
+            <label class="label" for="naziv">Naziv</label>
+            <input id="naziv" name="naziv" type="text" required />
+          </div>
+          <div>
+            <label class="label" for="stepen">Stepen</label>
+            <select id="stepen" name="stepen">
+              <option value="OSNOVNE">OSNOVNE</option>
+              <option value="MASTER">MASTER</option>
+              <option value="DOKTORSKE">DOKTORSKE</option>
+            </select>
+          </div>
+          <div>
+            <label class="label" for="ukupnoEspb">Ukupno ESPB</label>
+            <input id="ukupnoEspb" name="ukupnoEspb" type="number" min="0" required />
+          </div>
+        </form>
+      </section>
+      <section class="card">
+        <h2>Predmeti</h2>
+        <div class="grid two">
+          <div>
+            <label class="label" for="filter">Filter</label>
+            <input id="filter" type="text" placeholder="Naziv ili sifra" />
+          </div>
+          <div class="notice">
+            Prevuci predmet u obaveznu listu ili izbornu grupu.
+          </div>
+        </div>
+        <div id="subjectList" class="list"></div>
+      </section>
+      <section class="card">
+        <h2>Moduli i plan</h2>
+        <form id="moduleForm" class="grid three">
+          <div>
+            <label class="label" for="moduleNaziv">Naziv modula</label>
+            <input id="moduleNaziv" name="moduleNaziv" type="text" required />
+          </div>
+          <div>
+            <label class="label" for="moduleOznaka">Oznaka</label>
+            <input id="moduleOznaka" name="moduleOznaka" type="text" required />
+          </div>
+          <div>
+            <label class="label" for="moduleGodina">Godina</label>
+            <input id="moduleGodina" name="moduleGodina" type="number" min="1" required />
+          </div>
+          <button type="submit">Add module</button>
+        </form>
+        <div id="modules" class="grid"></div>
+      </section>
+      <section class="card">
+        <div class="inline">
+          <button id="saveButton">Create program</button>
+          <button class="secondary" id="resetButton" type="button">Reset</button>
+        </div>
+        <div id="saveStatus" class="notice" style="display: none;"></div>
+        <div id="saveError" class="error" style="display: none;"></div>
+      </section>
+    </main>
+
+    <script src="js/shared.js"></script>
+    <script src="js/create.js"></script>
+  </body>
+</html>
