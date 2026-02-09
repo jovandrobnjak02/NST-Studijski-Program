@@ -8,16 +8,18 @@ public class ModulDto {
     private String naziv;
     private String oznaka;
     private int godina;
+    private String grupaNaziv;
     private List<PlanStavkaDto> planStavke;
 
     public ModulDto() {
     }
 
-    public ModulDto(Long id, String naziv, String oznaka, int godina, List<PlanStavkaDto> planStavke) {
+    public ModulDto(Long id, String naziv, String oznaka, int godina, String grupaNaziv, List<PlanStavkaDto> planStavke) {
         this.id = id;
         this.naziv = naziv;
         this.oznaka = oznaka;
         this.godina = godina;
+        this.grupaNaziv = grupaNaziv;
         this.planStavke = planStavke;
     }
 
@@ -51,6 +53,14 @@ public class ModulDto {
 
     public void setGodina(int godina) {
         this.godina = godina;
+    }
+
+    public String getGrupaNaziv() {
+        return grupaNaziv;
+    }
+
+    public void setGrupaNaziv(String grupaNaziv) {
+        this.grupaNaziv = grupaNaziv;
     }
 
     public List<PlanStavkaDto> getPlanStavke() {

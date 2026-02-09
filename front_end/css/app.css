@@ -217,6 +217,16 @@ button.small {
   background: #fdfefe;
 }
 
+.module-body {
+  margin-top: 10px;
+  display: grid;
+  gap: 12px;
+}
+
+.module.collapsed .module-body {
+  display: none;
+}
+
 .module header {
   padding: 0 0 10px;
 }

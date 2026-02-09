@@ -197,4 +197,10 @@
             <column name="ciljni_predmet_sifra"/>
         </createIndex>
     </changeSet>
+
+    <changeSet id="add-modul-grupa-naziv" author="codex">
+        <addColumn tableName="modul">
+            <column name="grupa_naziv" type="varchar(255)"/>
+        </addColumn>
+    </changeSet>
 </databaseChangeLog>

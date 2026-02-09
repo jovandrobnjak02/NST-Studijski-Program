@@ -6,6 +6,7 @@ const saveButton = document.getElementById("saveButton");
 const resetButton = document.getElementById("resetButton");
 const saveStatus = document.getElementById("saveStatus");
 const saveError = document.getElementById("saveError");
+const totalInfo = document.getElementById("totalInfo");
 const programForm = document.getElementById("programForm");
 
 let subjects = [];
@@ -32,8 +33,83 @@ function clearError() {
   saveError.style.display = "none";
 }
 
+function showTotalInfo(message) {
+  totalInfo.textContent = message;
+  totalInfo.style.display = "block";
+}
+
+function hideTotalInfo() {
+  totalInfo.style.display = "none";
+}
+
 function getSubjectBySifra(sifra) {
   return subjects.find(item => item.sifra === sifra);
+}
+
+function calculateExpectedTotal() {
+  let total = 0;
+  modules.forEach(mod => {
+    mod.planStavke.forEach(plan => {
+      if (plan.tip === "OBAVEZAN") {
+        const subject = getSubjectBySifra(plan.predmetSifra);
+        if (subject) {
+          total += subject.espb;
+        }
+      }
+      if (plan.tip === "IZBORNI" && plan.izbornaGrupa) {
+        total += plan.izbornaGrupa.brojPredmeta * plan.izbornaGrupa.potrebniEspb;
+      }
+    });
+  });
+  return total;
+}
+
+function minSemestarForGodina(godina) {
+  const safeGodina = Math.max(1, godina || 1);
+  return (safeGodina - 1) * 2 + 1;
+}
+
+function normalizeSemestar(semestar, godina) {
+  const safeGodina = Math.max(1, godina || 1);
+  const minSemestar = (safeGodina - 1) * 2 + 1;
+  const maxSemestar = safeGodina * 2;
+  if (semestar < minSemestar) {
+    return minSemestar;
+  }
+  if (semestar > maxSemestar) {
+    return maxSemestar;
+  }
+  return semestar;
+}
+
+function maxSemestarForGodina(godina) {
+  const safeGodina = Math.max(1, godina || 1);
+  return safeGodina * 2;
+}
+
+function updateTotalInfo() {
+  const formData = new FormData(programForm);
+  const target = Number(formData.get("ukupnoEspb")) || 0;
+  const computed = calculateExpectedTotal();
+  if (!target && !computed) {
+    hideTotalInfo();
+    return;
+  }
+  showTotalInfo(`Ukupno ESPB u planu: ${computed}. Cilj: ${target}.`);
+}
+
+function findGroupCountIssue() {
+  for (const mod of modules) {
+    for (const plan of mod.planStavke) {
+      if (plan.tip === "IZBORNI" && plan.izbornaGrupa) {
+        const count = plan.izbornaGrupa.predmetSifre.length;
+        if (count < plan.izbornaGrupa.brojPredmeta) {
+          return `Izborna grupa mora imati najmanje ${plan.izbornaGrupa.brojPredmeta} predmeta.`;
+        }
+      }
+    }
+  }
+  return null;
 }
 
 function renderSubjects() {
@@ -95,18 +171,26 @@ function renderModules() {
   modulesEl.innerHTML = "";
   modules.forEach(module => {
     const card = document.createElement("div");
-    card.className = "module";
+    card.className = `module${module.collapsed ? " collapsed" : ""}`;
 
     const header = document.createElement("header");
+    const maxSemestar = maxSemestarForGodina(module.godina);
     header.innerHTML = `
       <h3>${module.naziv}</h3>
       <div class="inline">
+        ${module.grupaNaziv ? `<span class="tag">${module.grupaNaziv}</span>` : ""}
         <span class="tag">${module.oznaka}</span>
         <span class="tag">Godina ${module.godina}</span>
+        <button class="secondary small" data-toggle-module="${module.id}">
+          ${module.collapsed ? "Prosiri" : "Sakrij"}
+        </button>
         <button class="danger small" data-remove-module="${module.id}">Ukloni modul</button>
       </div>
     `;
     card.appendChild(header);
+
+    const body = document.createElement("div");
+    body.className = "module-body";
 
     const obavezniSection = document.createElement("div");
     obavezniSection.innerHTML = `
@@ -114,7 +198,9 @@ function renderModules() {
         <strong>Obavezni predmeti</strong>
         <label class="label">Semestar</label>
         <select data-default-semestar="${module.id}">
-          ${[1,2,3,4,5,6,7,8].map(sem => `<option value="${sem}">${sem}</option>`).join("")}
+          ${Array.from({ length: maxSemestar }, (_, idx) => idx + 1)
+            .map(sem => `<option value="${sem}">${sem}</option>`)
+            .join("")}
         </select>
       </div>
     `;
@@ -141,7 +227,7 @@ function renderModules() {
           </div>
           <div class="inline">
             <label class="label">Semestar</label>
-            <input type="number" min="1" max="8" value="${item.semestar}" data-plan-semestar="${item.id}" />
+            <input type="number" min="1" max="${maxSemestar}" value="${item.semestar}" data-plan-semestar="${item.id}" />
             <button class="danger small" data-remove-plan="${item.id}">Ukloni</button>
           </div>
         `;
@@ -151,7 +237,7 @@ function renderModules() {
 
     obavezniSection.appendChild(obavezniDrop);
     obavezniSection.appendChild(obavezniList);
-    card.appendChild(obavezniSection);
+    body.appendChild(obavezniSection);
 
     const groupSection = document.createElement("div");
     groupSection.innerHTML = `
@@ -165,7 +251,7 @@ function renderModules() {
     groupForm.innerHTML = `
       <div>
         <label class="label">Semestar</label>
-        <input type="number" min="1" max="8" value="1" name="semestar" required />
+        <input type="number" min="${minSemestarForGodina(module.godina)}" max="${maxSemestar}" value="${minSemestarForGodina(module.godina)}" name="semestar" required />
       </div>
       <div>
         <label class="label">Potrebni ESPB</label>
@@ -245,7 +331,8 @@ function renderModules() {
       });
     }
 
-    card.appendChild(groupSection);
+    body.appendChild(groupSection);
+    card.appendChild(body);
     modulesEl.appendChild(card);
   });
 
@@ -267,6 +354,14 @@ function renderModules() {
     });
   });
 
+  modulesEl.querySelectorAll("[data-toggle-module]").forEach(button => {
+    button.addEventListener("click", () => {
+      const id = Number(button.getAttribute("data-toggle-module"));
+      modules = modules.map(mod => mod.id === id ? { ...mod, collapsed: !mod.collapsed } : mod);
+      renderModules();
+    });
+  });
+
   modulesEl.querySelectorAll("[data-plan-semestar]").forEach(input => {
     input.addEventListener("change", () => {
       const planId = Number(input.getAttribute("data-plan-semestar"));
@@ -274,7 +369,11 @@ function renderModules() {
       modules.forEach(mod => {
         const plan = mod.planStavke.find(item => item.id === planId);
         if (plan) {
-          plan.semestar = value;
+          const corrected = normalizeSemestar(value, mod.godina);
+          plan.semestar = corrected;
+          if (Number(input.value) !== corrected) {
+            input.value = corrected;
+          }
         }
       });
     });
@@ -293,6 +392,8 @@ function renderModules() {
       renderModules();
     });
   });
+
+  updateTotalInfo();
 }
 
 function addObavezni(moduleId, sifra) {
@@ -313,7 +414,10 @@ function addObavezni(moduleId, sifra) {
   }
 
   const semestarSelect = modulesEl.querySelector(`[data-default-semestar="${moduleId}"]`);
-  const semestar = semestarSelect ? Number(semestarSelect.value) : 1;
+  const semestar = normalizeSemestar(
+    semestarSelect ? Number(semestarSelect.value) : 1,
+    module.godina
+  );
 
   module.planStavke.push({
     id: nextPlanId++,
@@ -332,10 +436,11 @@ function addGroup(moduleId, semestar, espb, broj) {
   if (!module) {
     return;
   }
+  const normalizedSemestar = normalizeSemestar(semestar, module.godina);
   module.planStavke.push({
     id: nextPlanId++,
     tip: "IZBORNI",
-    semestar,
+    semestar: normalizedSemestar,
     aktivan: true,
     predmetSifra: null,
     izbornaGrupa: {
@@ -394,6 +499,7 @@ function buildPayload() {
     moduli: modules.map(mod => ({
       id: null,
       naziv: mod.naziv,
+      grupaNaziv: mod.grupaNaziv || null,
       oznaka: mod.oznaka,
       godina: mod.godina,
       planStavke: mod.planStavke.map(plan => ({
@@ -418,6 +524,7 @@ moduleForm.addEventListener("submit", event => {
   clearError();
   const data = new FormData(moduleForm);
   const naziv = data.get("moduleNaziv").trim();
+  const grupaNaziv = data.get("moduleGrupa").trim();
   const oznaka = data.get("moduleOznaka").trim();
   const godina = Number(data.get("moduleGodina"));
   if (!naziv || !oznaka || !godina) {
@@ -427,8 +534,10 @@ moduleForm.addEventListener("submit", event => {
   modules.push({
     id: nextModuleId++,
     naziv,
+    grupaNaziv,
     oznaka,
     godina,
+    collapsed: false,
     planStavke: []
   });
   moduleForm.reset();
@@ -436,6 +545,7 @@ moduleForm.addEventListener("submit", event => {
 });
 
 filterInput.addEventListener("input", renderSubjects);
+programForm.addEventListener("input", updateTotalInfo);
 
 saveButton.addEventListener("click", async () => {
   clearError();
@@ -447,6 +557,16 @@ saveButton.addEventListener("click", async () => {
   }
   if (!payload.moduli.length) {
     showError("Dodaj bar jedan modul.");
+    return;
+  }
+  const groupIssue = findGroupCountIssue();
+  if (groupIssue) {
+    showError(groupIssue);
+    return;
+  }
+  const expectedTotal = calculateExpectedTotal();
+  if (payload.ukupnoEspb !== expectedTotal) {
+    showError(`Ukupno ESPB mora biti ${expectedTotal}.`);
     return;
   }
   showStatus("Kreiranje programa...");

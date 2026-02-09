@@ -41,7 +41,10 @@ function renderModules(moduli = []) {
     moduleCard.innerHTML = `
       <header>
         <h3>${modul.naziv} (${modul.oznaka || ""})</h3>
-        <div class="tag">Godina ${modul.godina}</div>
+        <div class="inline">
+          ${modul.grupaNaziv ? `<span class="tag">${modul.grupaNaziv}</span>` : ""}
+          <span class="tag">Godina ${modul.godina}</span>
+        </div>
       </header>
     `;
 

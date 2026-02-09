@@ -6,1052 +6,1140 @@
     http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.20.xsd">
   <changeSet id="seed-predmet-2026-01-25" author="fon-scraper">
     <insert tableName="predmet">
-      <column name="sifra" value="OAS001"/>
-      <column name="naziv" value="Analiza i logicko projektovanje IS (projekat)"/>
-      <column name="espb" valueNumeric="6"/>
-      <column name="predavanja" valueNumeric="2"/>
-      <column name="vezbe" valueNumeric="2"/>
-      <column name="praktikum" valueNumeric="0"/>
-    </insert>
-    <insert tableName="predmet">
-      <column name="sifra" value="OAS002"/>
-      <column name="naziv" value="Analiza pouzdanosti i rizika"/>
-      <column name="espb" valueNumeric="5"/>
-      <column name="predavanja" valueNumeric="0"/>
-      <column name="vezbe" valueNumeric="0"/>
-      <column name="praktikum" valueNumeric="0"/>
-    </insert>
-    <insert tableName="predmet">
-      <column name="sifra" value="OAS003"/>
-      <column name="naziv" value="Arhitektura racunara i operativni sistemi"/>
-      <column name="espb" valueNumeric="6"/>
-      <column name="predavanja" valueNumeric="2"/>
-      <column name="vezbe" valueNumeric="1"/>
-      <column name="praktikum" valueNumeric="1"/>
-    </insert>
-    <insert tableName="predmet">
-      <column name="sifra" value="OAS004"/>
-      <column name="naziv" value="Baze podataka"/>
-      <column name="espb" valueNumeric="6"/>
-      <column name="predavanja" valueNumeric="2"/>
-      <column name="vezbe" valueNumeric="2"/>
-      <column name="praktikum" valueNumeric="0"/>
-    </insert>
-    <insert tableName="predmet">
-      <column name="sifra" value="OAS005"/>
-      <column name="naziv" value="Brend menadzment"/>
-      <column name="espb" valueNumeric="5"/>
-      <column name="predavanja" valueNumeric="2"/>
-      <column name="vezbe" valueNumeric="2"/>
-      <column name="praktikum" valueNumeric="0"/>
-    </insert>
-    <insert tableName="predmet">
-      <column name="sifra" value="OAS006"/>
-      <column name="naziv" value="Cloud infrastruktura i servisi"/>
-      <column name="espb" valueNumeric="5"/>
-      <column name="predavanja" valueNumeric="2"/>
-      <column name="vezbe" valueNumeric="2"/>
-      <column name="praktikum" valueNumeric="0"/>
-    </insert>
-    <insert tableName="predmet">
-      <column name="sifra" value="OAS007"/>
-      <column name="naziv" value="Digitalni marketing"/>
-      <column name="espb" valueNumeric="6"/>
-      <column name="predavanja" valueNumeric="2"/>
-      <column name="vezbe" valueNumeric="2"/>
-      <column name="praktikum" valueNumeric="0"/>
-    </insert>
-    <insert tableName="predmet">
-      <column name="sifra" value="OAS008"/>
-      <column name="naziv" value="Diskretne matematicke strukture"/>
-      <column name="espb" valueNumeric="5"/>
-      <column name="predavanja" valueNumeric="0"/>
-      <column name="vezbe" valueNumeric="0"/>
-      <column name="praktikum" valueNumeric="0"/>
-    </insert>
-    <insert tableName="predmet">
-      <column name="sifra" value="OAS009"/>
-      <column name="naziv" value="Ekoloski menadzment"/>
-      <column name="espb" valueNumeric="5"/>
-      <column name="predavanja" valueNumeric="2"/>
-      <column name="vezbe" valueNumeric="2"/>
-      <column name="praktikum" valueNumeric="0"/>
-    </insert>
-    <insert tableName="predmet">
-      <column name="sifra" value="OAS010"/>
-      <column name="naziv" value="Ekonometrijske metode"/>
-      <column name="espb" valueNumeric="6"/>
-      <column name="predavanja" valueNumeric="0"/>
-      <column name="vezbe" valueNumeric="0"/>
-      <column name="praktikum" valueNumeric="0"/>
-    </insert>
-    <insert tableName="predmet">
-      <column name="sifra" value="OAS011"/>
-      <column name="naziv" value="Ekonomija"/>
-      <column name="espb" valueNumeric="6"/>
-      <column name="predavanja" valueNumeric="2"/>
-      <column name="vezbe" valueNumeric="2"/>
-      <column name="praktikum" valueNumeric="0"/>
-    </insert>
-    <insert tableName="predmet">
-      <column name="sifra" value="OAS012"/>
-      <column name="naziv" value="Ekonomija"/>
-      <column name="espb" valueNumeric="6"/>
-      <column name="predavanja" valueNumeric="2"/>
-      <column name="vezbe" valueNumeric="2"/>
-      <column name="praktikum" valueNumeric="0"/>
-    </insert>
-    <insert tableName="predmet">
-      <column name="sifra" value="OAS013"/>
-      <column name="naziv" value="Ekonomika poslovanja i planiranje"/>
-      <column name="espb" valueNumeric="6"/>
-      <column name="predavanja" valueNumeric="2"/>
-      <column name="vezbe" valueNumeric="2"/>
-      <column name="praktikum" valueNumeric="0"/>
-    </insert>
-    <insert tableName="predmet">
-      <column name="sifra" value="OAS014"/>
-      <column name="naziv" value="Elektronsko poslovanje"/>
-      <column name="espb" valueNumeric="6"/>
-      <column name="predavanja" valueNumeric="2"/>
-      <column name="vezbe" valueNumeric="1"/>
-      <column name="praktikum" valueNumeric="1"/>
-    </insert>
-    <insert tableName="predmet">
-      <column name="sifra" value="OAS015"/>
-      <column name="naziv" value="Engleski jezik struke 1"/>
-      <column name="espb" valueNumeric="5"/>
-      <column name="predavanja" valueNumeric="1"/>
-      <column name="vezbe" valueNumeric="1"/>
-      <column name="praktikum" valueNumeric="0"/>
-    </insert>
-    <insert tableName="predmet">
-      <column name="sifra" value="OAS016"/>
-      <column name="naziv" value="Engleski jezik struke 2"/>
-      <column name="espb" valueNumeric="3"/>
-      <column name="predavanja" valueNumeric="2"/>
-      <column name="vezbe" valueNumeric="2"/>
-      <column name="praktikum" valueNumeric="0"/>
-    </insert>
-    <insert tableName="predmet">
-      <column name="sifra" value="OAS017"/>
-      <column name="naziv" value="ETL i skladista podataka"/>
-      <column name="espb" valueNumeric="6"/>
-      <column name="predavanja" valueNumeric="2"/>
-      <column name="vezbe" valueNumeric="2"/>
-      <column name="praktikum" valueNumeric="0"/>
-    </insert>
-    <insert tableName="predmet">
-      <column name="sifra" value="OAS018"/>
-      <column name="naziv" value="Finansijska trzista"/>
-      <column name="espb" valueNumeric="6"/>
-      <column name="predavanja" valueNumeric="2"/>
-      <column name="vezbe" valueNumeric="1"/>
-      <column name="praktikum" valueNumeric="1"/>
-    </insert>
-    <insert tableName="predmet">
-      <column name="sifra" value="OAS019"/>
-      <column name="naziv" value="Finansijski menadzment i racunovodstvo"/>
-      <column name="espb" valueNumeric="6"/>
-      <column name="predavanja" valueNumeric="2"/>
-      <column name="vezbe" valueNumeric="2"/>
-      <column name="praktikum" valueNumeric="0"/>
-    </insert>
-    <insert tableName="predmet">
-      <column name="sifra" value="OAS020"/>
-      <column name="naziv" value="Francuski jezik struke 2"/>
-      <column name="espb" valueNumeric="3"/>
-      <column name="predavanja" valueNumeric="0"/>
-      <column name="vezbe" valueNumeric="0"/>
-      <column name="praktikum" valueNumeric="0"/>
-    </insert>
-    <insert tableName="predmet">
-      <column name="sifra" value="OAS021"/>
-      <column name="naziv" value="Industrijsko i menadzment inzenjerstvo"/>
-      <column name="espb" valueNumeric="6"/>
-      <column name="predavanja" valueNumeric="2"/>
-      <column name="vezbe" valueNumeric="2"/>
-      <column name="praktikum" valueNumeric="0"/>
-    </insert>
-    <insert tableName="predmet">
-      <column name="sifra" value="OAS022"/>
-      <column name="naziv" value="Informacioni sistemi preduzeca"/>
-      <column name="espb" valueNumeric="6"/>
-      <column name="predavanja" valueNumeric="2"/>
-      <column name="vezbe" valueNumeric="4"/>
-      <column name="praktikum" valueNumeric="0"/>
-    </insert>
-    <insert tableName="predmet">
-      <column name="sifra" value="OAS023"/>
-      <column name="naziv" value="Inteligentni sistemi"/>
-      <column name="espb" valueNumeric="6"/>
-      <column name="predavanja" valueNumeric="2"/>
-      <column name="vezbe" valueNumeric="2"/>
-      <column name="praktikum" valueNumeric="0"/>
-    </insert>
-    <insert tableName="predmet">
-      <column name="sifra" value="OAS024"/>
-      <column name="naziv" value="Interakcija covek-racunar"/>
-      <column name="espb" valueNumeric="6"/>
-      <column name="predavanja" valueNumeric="2"/>
-      <column name="vezbe" valueNumeric="2"/>
-      <column name="praktikum" valueNumeric="0"/>
-    </insert>
-    <insert tableName="predmet">
-      <column name="sifra" value="OAS025"/>
-      <column name="naziv" value="Internet tehnologije"/>
-      <column name="espb" valueNumeric="6"/>
-      <column name="predavanja" valueNumeric="2"/>
-      <column name="vezbe" valueNumeric="1"/>
-      <column name="praktikum" valueNumeric="1"/>
-    </insert>
-    <insert tableName="predmet">
-      <column name="sifra" value="OAS026"/>
-      <column name="naziv" value="Inzenjering kvaliteta"/>
-      <column name="espb" valueNumeric="6"/>
-      <column name="predavanja" valueNumeric="2"/>
-      <column name="vezbe" valueNumeric="2"/>
-      <column name="praktikum" valueNumeric="0"/>
-    </insert>
-    <insert tableName="predmet">
-      <column name="sifra" value="OAS027"/>
-      <column name="naziv" value="Inzenjering procesa"/>
-      <column name="espb" valueNumeric="6"/>
-      <column name="predavanja" valueNumeric="2"/>
-      <column name="vezbe" valueNumeric="2"/>
-      <column name="praktikum" valueNumeric="0"/>
-    </insert>
-    <insert tableName="predmet">
-      <column name="sifra" value="OAS028"/>
-      <column name="naziv" value="Jezici i okruzenja za razvoj IS"/>
-      <column name="espb" valueNumeric="6"/>
-      <column name="predavanja" valueNumeric="2"/>
-      <column name="vezbe" valueNumeric="1"/>
-      <column name="praktikum" valueNumeric="1"/>
-    </insert>
-    <insert tableName="predmet">
-      <column name="sifra" value="OAS029"/>
-      <column name="naziv" value="Klijentske veb tehnologije i skriptni jezici"/>
-      <column name="espb" valueNumeric="6"/>
-      <column name="predavanja" valueNumeric="2"/>
-      <column name="vezbe" valueNumeric="1"/>
-      <column name="praktikum" valueNumeric="1"/>
-    </insert>
-    <insert tableName="predmet">
-      <column name="sifra" value="OAS030"/>
-      <column name="naziv" value="Kontrola kvaliteta"/>
-      <column name="espb" valueNumeric="5"/>
-      <column name="predavanja" valueNumeric="2"/>
-      <column name="vezbe" valueNumeric="1"/>
-      <column name="praktikum" valueNumeric="1"/>
-    </insert>
-    <insert tableName="predmet">
-      <column name="sifra" value="OAS031"/>
-      <column name="naziv" value="Korporativne komunikacije"/>
-      <column name="espb" valueNumeric="5"/>
-      <column name="predavanja" valueNumeric="2"/>
-      <column name="vezbe" valueNumeric="2"/>
-      <column name="praktikum" valueNumeric="0"/>
-    </insert>
-    <insert tableName="predmet">
-      <column name="sifra" value="OAS032"/>
-      <column name="naziv" value="Lean logistika"/>
-      <column name="espb" valueNumeric="5"/>
-      <column name="predavanja" valueNumeric="2"/>
-      <column name="vezbe" valueNumeric="2"/>
-      <column name="praktikum" valueNumeric="0"/>
-    </insert>
-    <insert tableName="predmet">
-      <column name="sifra" value="OAS033"/>
-      <column name="naziv" value="Lin proizvodnja i usluge"/>
-      <column name="espb" valueNumeric="5"/>
-      <column name="predavanja" valueNumeric="2"/>
-      <column name="vezbe" valueNumeric="2"/>
-      <column name="praktikum" valueNumeric="0"/>
-    </insert>
-    <insert tableName="predmet">
-      <column name="sifra" value="OAS034"/>
-      <column name="naziv" value="Linearni statisticki modeli"/>
-      <column name="espb" valueNumeric="6"/>
-      <column name="predavanja" valueNumeric="0"/>
-      <column name="vezbe" valueNumeric="0"/>
-      <column name="praktikum" valueNumeric="0"/>
-    </insert>
-    <insert tableName="predmet">
-      <column name="sifra" value="OAS035"/>
-      <column name="naziv" value="Logistika"/>
-      <column name="espb" valueNumeric="6"/>
-      <column name="predavanja" valueNumeric="2"/>
-      <column name="vezbe" valueNumeric="2"/>
-      <column name="praktikum" valueNumeric="0"/>
-    </insert>
-    <insert tableName="predmet">
-      <column name="sifra" value="OAS036"/>
-      <column name="naziv" value="Lokacija i raspored objekata"/>
-      <column name="espb" valueNumeric="6"/>
-      <column name="predavanja" valueNumeric="2"/>
-      <column name="vezbe" valueNumeric="2"/>
-      <column name="praktikum" valueNumeric="0"/>
-    </insert>
-    <insert tableName="predmet">
-      <column name="sifra" value="OAS037"/>
-      <column name="naziv" value="Marketing"/>
-      <column name="espb" valueNumeric="5"/>
-      <column name="predavanja" valueNumeric="2"/>
-      <column name="vezbe" valueNumeric="2"/>
-      <column name="praktikum" valueNumeric="0"/>
-    </insert>
-    <insert tableName="predmet">
-      <column name="sifra" value="OAS038"/>
-      <column name="naziv" value="Masinsko ucenje"/>
-      <column name="espb" valueNumeric="5"/>
-      <column name="predavanja" valueNumeric="2"/>
-      <column name="vezbe" valueNumeric="1"/>
-      <column name="praktikum" valueNumeric="1"/>
-    </insert>
-    <insert tableName="predmet">
-      <column name="sifra" value="OAS039"/>
-      <column name="naziv" value="Matematika 1"/>
-      <column name="espb" valueNumeric="6"/>
-      <column name="predavanja" valueNumeric="2"/>
-      <column name="vezbe" valueNumeric="2"/>
-      <column name="praktikum" valueNumeric="0"/>
-    </insert>
-    <insert tableName="predmet">
-      <column name="sifra" value="OAS040"/>
-      <column name="naziv" value="Matematika 2"/>
-      <column name="espb" valueNumeric="6"/>
-      <column name="predavanja" valueNumeric="2"/>
-      <column name="vezbe" valueNumeric="3"/>
-      <column name="praktikum" valueNumeric="0"/>
-    </insert>
-    <insert tableName="predmet">
-      <column name="sifra" value="OAS041"/>
-      <column name="naziv" value="Matematika 3"/>
-      <column name="espb" valueNumeric="6"/>
-      <column name="predavanja" valueNumeric="2"/>
-      <column name="vezbe" valueNumeric="2"/>
-      <column name="praktikum" valueNumeric="0"/>
-    </insert>
-    <insert tableName="predmet">
-      <column name="sifra" value="OAS042"/>
-      <column name="naziv" value="Medjunarodni menadzment"/>
-      <column name="espb" valueNumeric="6"/>
-      <column name="predavanja" valueNumeric="2"/>
-      <column name="vezbe" valueNumeric="2"/>
-      <column name="praktikum" valueNumeric="0"/>
-    </insert>
-    <insert tableName="predmet">
-      <column name="sifra" value="OAS043"/>
-      <column name="naziv" value="Menadzment ljudskih resursa"/>
-      <column name="espb" valueNumeric="5"/>
-      <column name="predavanja" valueNumeric="2"/>
-      <column name="vezbe" valueNumeric="2"/>
-      <column name="praktikum" valueNumeric="0"/>
-    </insert>
-    <insert tableName="predmet">
-      <column name="sifra" value="OAS044"/>
-      <column name="naziv" value="Menadzment prodaje"/>
-      <column name="espb" valueNumeric="5"/>
-      <column name="predavanja" valueNumeric="2"/>
-      <column name="vezbe" valueNumeric="2"/>
-      <column name="praktikum" valueNumeric="0"/>
-    </insert>
-    <insert tableName="predmet">
-      <column name="sifra" value="OAS045"/>
-      <column name="naziv" value="Menadzment proizvodnje i pruzanja usluga"/>
-      <column name="espb" valueNumeric="6"/>
-      <column name="predavanja" valueNumeric="2"/>
-      <column name="vezbe" valueNumeric="2"/>
-      <column name="praktikum" valueNumeric="0"/>
-    </insert>
-    <insert tableName="predmet">
-      <column name="sifra" value="OAS046"/>
-      <column name="naziv" value="Menadzment tehnologije i razvoja"/>
-      <column name="espb" valueNumeric="5"/>
-      <column name="predavanja" valueNumeric="2"/>
-      <column name="vezbe" valueNumeric="2"/>
-      <column name="praktikum" valueNumeric="0"/>
-    </insert>
-    <insert tableName="predmet">
-      <column name="sifra" value="OAS047"/>
-      <column name="naziv" value="Menadzment totalnog kvaliteta"/>
-      <column name="espb" valueNumeric="4"/>
-      <column name="predavanja" valueNumeric="2"/>
-      <column name="vezbe" valueNumeric="2"/>
-      <column name="praktikum" valueNumeric="0"/>
-    </insert>
-    <insert tableName="predmet">
-      <column name="sifra" value="OAS048"/>
-      <column name="naziv" value="Menadzment"/>
-      <column name="espb" valueNumeric="6"/>
-      <column name="predavanja" valueNumeric="2"/>
-      <column name="vezbe" valueNumeric="2"/>
-      <column name="praktikum" valueNumeric="0"/>
-    </insert>
-    <insert tableName="predmet">
-      <column name="sifra" value="OAS049"/>
-      <column name="naziv" value="Metode optimizacije"/>
-      <column name="espb" valueNumeric="6"/>
-      <column name="predavanja" valueNumeric="2"/>
-      <column name="vezbe" valueNumeric="2"/>
-      <column name="praktikum" valueNumeric="0"/>
-    </insert>
-    <insert tableName="predmet">
-      <column name="sifra" value="OAS050"/>
-      <column name="naziv" value="Metodologija izrade IT projekta"/>
-      <column name="espb" valueNumeric="2"/>
-      <column name="predavanja" valueNumeric="2"/>
-      <column name="vezbe" valueNumeric="2"/>
-      <column name="praktikum" valueNumeric="0"/>
-    </insert>
-    <insert tableName="predmet">
-      <column name="sifra" value="OAS051"/>
-      <column name="naziv" value="Metrologija i normativno regulisanje kvaliteta"/>
-      <column name="espb" valueNumeric="5"/>
-      <column name="predavanja" valueNumeric="2"/>
-      <column name="vezbe" valueNumeric="2"/>
-      <column name="praktikum" valueNumeric="0"/>
-    </insert>
-    <insert tableName="predmet">
-      <column name="sifra" value="OAS052"/>
-      <column name="naziv" value="Metrologija sa osnovama tehnike"/>
-      <column name="espb" valueNumeric="6"/>
-      <column name="predavanja" valueNumeric="2"/>
-      <column name="vezbe" valueNumeric="1"/>
-      <column name="praktikum" valueNumeric="1"/>
-    </insert>
-    <insert tableName="predmet">
-      <column name="sifra" value="OAS053"/>
-      <column name="naziv" value="Modeli i indikatori poboljsavanja kvaliteta"/>
-      <column name="espb" valueNumeric="5"/>
-      <column name="predavanja" valueNumeric="2"/>
-      <column name="vezbe" valueNumeric="2"/>
-      <column name="praktikum" valueNumeric="0"/>
-    </insert>
-    <insert tableName="predmet">
-      <column name="sifra" value="OAS054"/>
-      <column name="naziv" value="Modelovanje poslovnih procesa"/>
-      <column name="espb" valueNumeric="5"/>
-      <column name="predavanja" valueNumeric="2"/>
-      <column name="vezbe" valueNumeric="2"/>
-      <column name="praktikum" valueNumeric="0"/>
-    </insert>
-    <insert tableName="predmet">
-      <column name="sifra" value="OAS055"/>
-      <column name="naziv" value="Napredne Java tehnologije"/>
-      <column name="espb" valueNumeric="6"/>
-      <column name="predavanja" valueNumeric="2"/>
-      <column name="vezbe" valueNumeric="2"/>
-      <column name="praktikum" valueNumeric="0"/>
-    </insert>
-    <insert tableName="predmet">
-      <column name="sifra" value="OAS056"/>
-      <column name="naziv" value="Normativno regulisanje kvaliteta"/>
-      <column name="espb" valueNumeric="5"/>
-      <column name="predavanja" valueNumeric="2"/>
-      <column name="vezbe" valueNumeric="2"/>
-      <column name="praktikum" valueNumeric="0"/>
-    </insert>
-    <insert tableName="predmet">
-      <column name="sifra" value="OAS057"/>
-      <column name="naziv" value="Numericka analiza"/>
-      <column name="espb" valueNumeric="5"/>
-      <column name="predavanja" valueNumeric="2"/>
-      <column name="vezbe" valueNumeric="2"/>
-      <column name="praktikum" valueNumeric="0"/>
-    </insert>
-    <insert tableName="predmet">
-      <column name="sifra" value="OAS058"/>
-      <column name="naziv" value="Ocena kvaliteta poslovnog sistema"/>
-      <column name="espb" valueNumeric="6"/>
-      <column name="predavanja" valueNumeric="2"/>
-      <column name="vezbe" valueNumeric="2"/>
-      <column name="praktikum" valueNumeric="0"/>
-    </insert>
-    <insert tableName="predmet">
-      <column name="sifra" value="OAS059"/>
-      <column name="naziv" value="Odabrana poglavlja iz Menadzmenta kvaliteta 1"/>
-      <column name="espb" valueNumeric="4"/>
-      <column name="predavanja" valueNumeric="2"/>
-      <column name="vezbe" valueNumeric="2"/>
-      <column name="praktikum" valueNumeric="0"/>
-    </insert>
-    <insert tableName="predmet">
-      <column name="sifra" value="OAS060"/>
-      <column name="naziv" value="Odnosi s javnoscu"/>
-      <column name="espb" valueNumeric="5"/>
-      <column name="predavanja" valueNumeric="2"/>
-      <column name="vezbe" valueNumeric="2"/>
-      <column name="praktikum" valueNumeric="0"/>
-    </insert>
-    <insert tableName="predmet">
-      <column name="sifra" value="OAS061"/>
-      <column name="naziv" value="Operaciona istrazivanja 1"/>
-      <column name="espb" valueNumeric="6"/>
-      <column name="predavanja" valueNumeric="2"/>
-      <column name="vezbe" valueNumeric="2"/>
-      <column name="praktikum" valueNumeric="0"/>
-    </insert>
-    <insert tableName="predmet">
-      <column name="sifra" value="OAS062"/>
-      <column name="naziv" value="Operaciona istrazivanja 2"/>
-      <column name="espb" valueNumeric="5"/>
-      <column name="predavanja" valueNumeric="2"/>
-      <column name="vezbe" valueNumeric="2"/>
-      <column name="praktikum" valueNumeric="0"/>
-    </insert>
-    <insert tableName="predmet">
-      <column name="sifra" value="OAS063"/>
-      <column name="naziv" value="Osnove finansijskog menadzmenta"/>
-      <column name="espb" valueNumeric="6"/>
-      <column name="predavanja" valueNumeric="2"/>
-      <column name="vezbe" valueNumeric="2"/>
-      <column name="praktikum" valueNumeric="0"/>
-    </insert>
-    <insert tableName="predmet">
-      <column name="sifra" value="OAS064"/>
-      <column name="naziv" value="Osnove industrijskog inzenjerstva"/>
-      <column name="espb" valueNumeric="6"/>
-      <column name="predavanja" valueNumeric="2"/>
-      <column name="vezbe" valueNumeric="2"/>
-      <column name="praktikum" valueNumeric="0"/>
-    </insert>
-    <insert tableName="predmet">
-      <column name="sifra" value="OAS065"/>
-      <column name="naziv" value="Osnove informaciono komunikacionih tehnologija"/>
-      <column name="espb" valueNumeric="5"/>
-      <column name="predavanja" valueNumeric="2"/>
-      <column name="vezbe" valueNumeric="1"/>
-      <column name="praktikum" valueNumeric="1"/>
-    </insert>
-    <insert tableName="predmet">
-      <column name="sifra" value="OAS066"/>
-      <column name="naziv" value="Osnove kvaliteta"/>
-      <column name="espb" valueNumeric="5"/>
-      <column name="predavanja" valueNumeric="2"/>
-      <column name="vezbe" valueNumeric="2"/>
-      <column name="praktikum" valueNumeric="0"/>
-    </insert>
-    <insert tableName="predmet">
-      <column name="sifra" value="OAS067"/>
-      <column name="naziv" value="Osnove operacionog menadzmenta"/>
-      <column name="espb" valueNumeric="5"/>
-      <column name="predavanja" valueNumeric="2"/>
-      <column name="vezbe" valueNumeric="2"/>
-      <column name="praktikum" valueNumeric="0"/>
-    </insert>
-    <insert tableName="predmet">
-      <column name="sifra" value="OAS068"/>
-      <column name="naziv" value="Osnove programiranja"/>
-      <column name="espb" valueNumeric="6"/>
-      <column name="predavanja" valueNumeric="2"/>
-      <column name="vezbe" valueNumeric="1"/>
-      <column name="praktikum" valueNumeric="1"/>
-    </insert>
-    <insert tableName="predmet">
-      <column name="sifra" value="OAS069"/>
-      <column name="naziv" value="Osnove racunarske inteligencije"/>
-      <column name="espb" valueNumeric="5"/>
-      <column name="predavanja" valueNumeric="2"/>
-      <column name="vezbe" valueNumeric="1"/>
-      <column name="praktikum" valueNumeric="1"/>
-    </insert>
-    <insert tableName="predmet">
-      <column name="sifra" value="OAS070"/>
-      <column name="naziv" value="Osnovi organizacije"/>
-      <column name="espb" valueNumeric="6"/>
-      <column name="predavanja" valueNumeric="2"/>
-      <column name="vezbe" valueNumeric="2"/>
-      <column name="praktikum" valueNumeric="0"/>
-    </insert>
-    <insert tableName="predmet">
-      <column name="sifra" value="OAS071"/>
-      <column name="naziv" value="Planiranje kvaliteta"/>
-      <column name="espb" valueNumeric="5"/>
-      <column name="predavanja" valueNumeric="2"/>
-      <column name="vezbe" valueNumeric="2"/>
-      <column name="praktikum" valueNumeric="0"/>
-    </insert>
-    <insert tableName="predmet">
-      <column name="sifra" value="OAS072"/>
-      <column name="naziv" value="Planiranje proizvodnje i usluga"/>
-      <column name="espb" valueNumeric="6"/>
-      <column name="predavanja" valueNumeric="3"/>
-      <column name="vezbe" valueNumeric="2"/>
-      <column name="praktikum" valueNumeric="0"/>
-    </insert>
-    <insert tableName="predmet">
-      <column name="sifra" value="OAS073"/>
-      <column name="naziv" value="Poslovna inteligencija"/>
-      <column name="espb" valueNumeric="5"/>
-      <column name="predavanja" valueNumeric="2"/>
-      <column name="vezbe" valueNumeric="2"/>
-      <column name="praktikum" valueNumeric="0"/>
-    </insert>
-    <insert tableName="predmet">
-      <column name="sifra" value="OAS074"/>
-      <column name="naziv" value="Poslovni informacioni sistemi"/>
-      <column name="espb" valueNumeric="5"/>
-      <column name="predavanja" valueNumeric="0"/>
-      <column name="vezbe" valueNumeric="0"/>
-      <column name="praktikum" valueNumeric="0"/>
-    </insert>
-    <insert tableName="predmet">
-      <column name="sifra" value="OAS075"/>
-      <column name="naziv" value="Poslovno pravo"/>
-      <column name="espb" valueNumeric="5"/>
-      <column name="predavanja" valueNumeric="3"/>
-      <column name="vezbe" valueNumeric="2"/>
-      <column name="praktikum" valueNumeric="0"/>
-    </insert>
-    <insert tableName="predmet">
-      <column name="sifra" value="OAS076"/>
-      <column name="naziv" value="Pravne osnove informacionih sistema"/>
-      <column name="espb" valueNumeric="5"/>
-      <column name="predavanja" valueNumeric="2"/>
-      <column name="vezbe" valueNumeric="2"/>
-      <column name="praktikum" valueNumeric="0"/>
-    </insert>
-    <insert tableName="predmet">
-      <column name="sifra" value="OAS077"/>
-      <column name="naziv" value="Preduzetnistvo"/>
-      <column name="espb" valueNumeric="5"/>
-      <column name="predavanja" valueNumeric="2"/>
-      <column name="vezbe" valueNumeric="2"/>
-      <column name="praktikum" valueNumeric="0"/>
-    </insert>
-    <insert tableName="predmet">
-      <column name="sifra" value="OAS078"/>
-      <column name="naziv" value="Principi programiranja"/>
-      <column name="espb" valueNumeric="5"/>
-      <column name="predavanja" valueNumeric="2"/>
-      <column name="vezbe" valueNumeric="2"/>
-      <column name="praktikum" valueNumeric="0"/>
-    </insert>
-    <insert tableName="predmet">
-      <column name="sifra" value="OAS079"/>
-      <column name="naziv" value="Programiranje 1"/>
-      <column name="espb" valueNumeric="4"/>
-      <column name="predavanja" valueNumeric="2"/>
-      <column name="vezbe" valueNumeric="0"/>
-      <column name="praktikum" valueNumeric="2"/>
-    </insert>
-    <insert tableName="predmet">
-      <column name="sifra" value="OAS080"/>
-      <column name="naziv" value="Programiranje 2"/>
-      <column name="espb" valueNumeric="6"/>
-      <column name="predavanja" valueNumeric="2"/>
-      <column name="vezbe" valueNumeric="1"/>
-      <column name="praktikum" valueNumeric="1"/>
-    </insert>
-    <insert tableName="predmet">
-      <column name="sifra" value="OAS081"/>
-      <column name="naziv" value="Programski jezici za analitiku"/>
-      <column name="espb" valueNumeric="6"/>
-      <column name="predavanja" valueNumeric="2"/>
-      <column name="vezbe" valueNumeric="2"/>
-      <column name="praktikum" valueNumeric="0"/>
-    </insert>
-    <insert tableName="predmet">
-      <column name="sifra" value="OAS082"/>
-      <column name="naziv" value="Programski jezici"/>
-      <column name="espb" valueNumeric="5"/>
-      <column name="predavanja" valueNumeric="2"/>
-      <column name="vezbe" valueNumeric="1"/>
-      <column name="praktikum" valueNumeric="1"/>
-    </insert>
-    <insert tableName="predmet">
-      <column name="sifra" value="OAS083"/>
-      <column name="naziv" value="Projektovanje informacionih sistema"/>
-      <column name="espb" valueNumeric="6"/>
-      <column name="predavanja" valueNumeric="2"/>
-      <column name="vezbe" valueNumeric="2"/>
-      <column name="praktikum" valueNumeric="1"/>
-    </insert>
-    <insert tableName="predmet">
-      <column name="sifra" value="OAS084"/>
-      <column name="naziv" value="Projektovanje organizacije"/>
-      <column name="espb" valueNumeric="6"/>
-      <column name="predavanja" valueNumeric="2"/>
-      <column name="vezbe" valueNumeric="2"/>
-      <column name="praktikum" valueNumeric="0"/>
-    </insert>
-    <insert tableName="predmet">
-      <column name="sifra" value="OAS085"/>
-      <column name="naziv" value="Projektovanje proizvodnih i usluznih sistema"/>
-      <column name="espb" valueNumeric="5"/>
-      <column name="predavanja" valueNumeric="2"/>
-      <column name="vezbe" valueNumeric="2"/>
-      <column name="praktikum" valueNumeric="0"/>
-    </insert>
-    <insert tableName="predmet">
-      <column name="sifra" value="OAS086"/>
-      <column name="naziv" value="Projektovanje proizvodnih sistema"/>
-      <column name="espb" valueNumeric="6"/>
-      <column name="predavanja" valueNumeric="2"/>
-      <column name="vezbe" valueNumeric="2"/>
-      <column name="praktikum" valueNumeric="0"/>
-    </insert>
-    <insert tableName="predmet">
-      <column name="sifra" value="OAS087"/>
-      <column name="naziv" value="Projektovanje softvera"/>
-      <column name="espb" valueNumeric="6"/>
-      <column name="predavanja" valueNumeric="2"/>
-      <column name="vezbe" valueNumeric="1"/>
-      <column name="praktikum" valueNumeric="1"/>
-    </insert>
-    <insert tableName="predmet">
-      <column name="sifra" value="OAS088"/>
-      <column name="naziv" value="Psihologija"/>
-      <column name="espb" valueNumeric="4"/>
-      <column name="predavanja" valueNumeric="2"/>
-      <column name="vezbe" valueNumeric="1"/>
-      <column name="praktikum" valueNumeric="0"/>
-    </insert>
-    <insert tableName="predmet">
-      <column name="sifra" value="OAS089"/>
-      <column name="naziv" value="Racunarske mreze i telekomunikacije"/>
-      <column name="espb" valueNumeric="6"/>
-      <column name="predavanja" valueNumeric="2"/>
-      <column name="vezbe" valueNumeric="1"/>
-      <column name="praktikum" valueNumeric="1"/>
-    </insert>
-    <insert tableName="predmet">
-      <column name="sifra" value="OAS090"/>
-      <column name="naziv" value="Racunarski integrisana proizvodnja"/>
-      <column name="espb" valueNumeric="6"/>
-      <column name="predavanja" valueNumeric="2"/>
-      <column name="vezbe" valueNumeric="2"/>
-      <column name="praktikum" valueNumeric="0"/>
-    </insert>
-    <insert tableName="predmet">
-      <column name="sifra" value="OAS091"/>
-      <column name="naziv" value="Racunovodstvo"/>
-      <column name="espb" valueNumeric="6"/>
-      <column name="predavanja" valueNumeric="2"/>
-      <column name="vezbe" valueNumeric="2"/>
-      <column name="praktikum" valueNumeric="0"/>
-    </insert>
-    <insert tableName="predmet">
-      <column name="sifra" value="OAS092"/>
-      <column name="naziv" value="Razvoj malih i srednjih preduzeca"/>
-      <column name="espb" valueNumeric="4"/>
-      <column name="predavanja" valueNumeric="0"/>
-      <column name="vezbe" valueNumeric="0"/>
-      <column name="praktikum" valueNumeric="0"/>
-    </insert>
-    <insert tableName="predmet">
-      <column name="sifra" value="OAS093"/>
-      <column name="naziv" value="Serverske veb tehnologije"/>
-      <column name="espb" valueNumeric="6"/>
-      <column name="predavanja" valueNumeric="2"/>
-      <column name="vezbe" valueNumeric="1"/>
-      <column name="praktikum" valueNumeric="1"/>
-    </insert>
-    <insert tableName="predmet">
-      <column name="sifra" value="OAS094"/>
-      <column name="naziv" value="Simulacija i simulacioni jezici"/>
-      <column name="espb" valueNumeric="6"/>
-      <column name="predavanja" valueNumeric="2"/>
-      <column name="vezbe" valueNumeric="1"/>
-      <column name="praktikum" valueNumeric="1"/>
-    </insert>
-    <insert tableName="predmet">
-      <column name="sifra" value="OAS095"/>
-      <column name="naziv" value="Simulacija u poslovnom odlucivanju"/>
-      <column name="espb" valueNumeric="5"/>
-      <column name="predavanja" valueNumeric="2"/>
-      <column name="vezbe" valueNumeric="2"/>
-      <column name="praktikum" valueNumeric="0"/>
-    </insert>
-    <insert tableName="predmet">
-      <column name="sifra" value="OAS096"/>
-      <column name="naziv" value="Sistem kvaliteta zivotne sredine"/>
-      <column name="espb" valueNumeric="5"/>
-      <column name="predavanja" valueNumeric="2"/>
-      <column name="vezbe" valueNumeric="2"/>
-      <column name="praktikum" valueNumeric="0"/>
-    </insert>
-    <insert tableName="predmet">
-      <column name="sifra" value="OAS097"/>
-      <column name="naziv" value="Sistem menadzmenta kvaliteta"/>
-      <column name="espb" valueNumeric="5"/>
-      <column name="predavanja" valueNumeric="2"/>
-      <column name="vezbe" valueNumeric="2"/>
-      <column name="praktikum" valueNumeric="0"/>
-    </insert>
-    <insert tableName="predmet">
-      <column name="sifra" value="OAS098"/>
-      <column name="naziv" value="Sistem menadzmenta zdravlja i bezbednosti na radu"/>
-      <column name="espb" valueNumeric="5"/>
-      <column name="predavanja" valueNumeric="2"/>
-      <column name="vezbe" valueNumeric="2"/>
-      <column name="praktikum" valueNumeric="0"/>
-    </insert>
-    <insert tableName="predmet">
-      <column name="sifra" value="OAS099"/>
-      <column name="naziv" value="Sociologija"/>
-      <column name="espb" valueNumeric="4"/>
-      <column name="predavanja" valueNumeric="2"/>
-      <column name="vezbe" valueNumeric="1"/>
-      <column name="praktikum" valueNumeric="0"/>
-    </insert>
-    <insert tableName="predmet">
-      <column name="sifra" value="OAS100"/>
-      <column name="naziv" value="Softverska podrska upravljanju projektima"/>
-      <column name="espb" valueNumeric="5"/>
-      <column name="predavanja" valueNumeric="2"/>
-      <column name="vezbe" valueNumeric="2"/>
-      <column name="praktikum" valueNumeric="0"/>
-    </insert>
-    <insert tableName="predmet">
-      <column name="sifra" value="OAS101"/>
-      <column name="naziv" value="Standardizacija 1"/>
-      <column name="espb" valueNumeric="6"/>
-      <column name="predavanja" valueNumeric="2"/>
-      <column name="vezbe" valueNumeric="2"/>
-      <column name="praktikum" valueNumeric="0"/>
-    </insert>
-    <insert tableName="predmet">
-      <column name="sifra" value="OAS102"/>
-      <column name="naziv" value="Standardizacija"/>
-      <column name="espb" valueNumeric="5"/>
-      <column name="predavanja" valueNumeric="2"/>
-      <column name="vezbe" valueNumeric="2"/>
-      <column name="praktikum" valueNumeric="0"/>
-    </insert>
-    <insert tableName="predmet">
-      <column name="sifra" value="OAS103"/>
-      <column name="naziv" value="Statistika"/>
-      <column name="espb" valueNumeric="6"/>
-      <column name="predavanja" valueNumeric="2"/>
-      <column name="vezbe" valueNumeric="2"/>
-      <column name="praktikum" valueNumeric="0"/>
-    </insert>
-    <insert tableName="predmet">
-      <column name="sifra" value="OAS104"/>
-      <column name="naziv" value="Strateski marketing"/>
-      <column name="espb" valueNumeric="5"/>
-      <column name="predavanja" valueNumeric="2"/>
-      <column name="vezbe" valueNumeric="2"/>
-      <column name="praktikum" valueNumeric="0"/>
-    </insert>
-    <insert tableName="predmet">
-      <column name="sifra" value="OAS105"/>
-      <column name="naziv" value="Strateski menadzment"/>
-      <column name="espb" valueNumeric="6"/>
-      <column name="predavanja" valueNumeric="2"/>
-      <column name="vezbe" valueNumeric="2"/>
-      <column name="praktikum" valueNumeric="0"/>
-    </insert>
-    <insert tableName="predmet">
-      <column name="sifra" value="OAS106"/>
-      <column name="naziv" value="Strukture podataka i algoritmi"/>
-      <column name="espb" valueNumeric="6"/>
-      <column name="predavanja" valueNumeric="2"/>
-      <column name="vezbe" valueNumeric="2"/>
-      <column name="praktikum" valueNumeric="0"/>
-    </insert>
-    <insert tableName="predmet">
-      <column name="sifra" value="OAS107"/>
-      <column name="naziv" value="Tehnolosko preduzetnistvo"/>
-      <column name="espb" valueNumeric="5"/>
-      <column name="predavanja" valueNumeric="2"/>
-      <column name="vezbe" valueNumeric="2"/>
-      <column name="praktikum" valueNumeric="0"/>
-    </insert>
-    <insert tableName="predmet">
-      <column name="sifra" value="OAS108"/>
-      <column name="naziv" value="Teorija odlucivanja"/>
-      <column name="espb" valueNumeric="5"/>
-      <column name="predavanja" valueNumeric="2"/>
-      <column name="vezbe" valueNumeric="2"/>
-      <column name="praktikum" valueNumeric="0"/>
-    </insert>
-    <insert tableName="predmet">
-      <column name="sifra" value="OAS109"/>
-      <column name="naziv" value="Teorija sistema"/>
-      <column name="espb" valueNumeric="6"/>
-      <column name="predavanja" valueNumeric="2"/>
-      <column name="vezbe" valueNumeric="2"/>
-      <column name="praktikum" valueNumeric="0"/>
-    </insert>
-    <insert tableName="predmet">
-      <column name="sifra" value="OAS110"/>
-      <column name="naziv" value="Teorija verovatnoce"/>
-      <column name="espb" valueNumeric="6"/>
-      <column name="predavanja" valueNumeric="2"/>
-      <column name="vezbe" valueNumeric="2"/>
-      <column name="praktikum" valueNumeric="0"/>
-    </insert>
-    <insert tableName="predmet">
-      <column name="sifra" value="OAS111"/>
-      <column name="naziv" value="Upravljacki sistemi"/>
-      <column name="espb" valueNumeric="7"/>
-      <column name="predavanja" valueNumeric="2"/>
-      <column name="vezbe" valueNumeric="2"/>
-      <column name="praktikum" valueNumeric="0"/>
-    </insert>
-    <insert tableName="predmet">
-      <column name="sifra" value="OAS112"/>
-      <column name="naziv" value="Upravljacko racunovodstvo"/>
-      <column name="espb" valueNumeric="6"/>
-      <column name="predavanja" valueNumeric="2"/>
-      <column name="vezbe" valueNumeric="2"/>
-      <column name="praktikum" valueNumeric="0"/>
-    </insert>
-    <insert tableName="predmet">
-      <column name="sifra" value="OAS113"/>
-      <column name="naziv" value="Upravljanje dokumentacijom"/>
-      <column name="espb" valueNumeric="5"/>
-      <column name="predavanja" valueNumeric="2"/>
-      <column name="vezbe" valueNumeric="2"/>
-      <column name="praktikum" valueNumeric="0"/>
-    </insert>
-    <insert tableName="predmet">
-      <column name="sifra" value="OAS114"/>
-      <column name="naziv" value="Upravljanje inovacijama"/>
-      <column name="espb" valueNumeric="5"/>
-      <column name="predavanja" valueNumeric="2"/>
-      <column name="vezbe" valueNumeric="1"/>
-      <column name="praktikum" valueNumeric="1"/>
-    </insert>
-    <insert tableName="predmet">
-      <column name="sifra" value="OAS115"/>
-      <column name="naziv" value="Upravljanje inovacionim projektima"/>
-      <column name="espb" valueNumeric="5"/>
-      <column name="predavanja" valueNumeric="2"/>
-      <column name="vezbe" valueNumeric="2"/>
-      <column name="praktikum" valueNumeric="0"/>
-    </insert>
-    <insert tableName="predmet">
-      <column name="sifra" value="OAS116"/>
-      <column name="naziv" value="Upravljanje investicijama"/>
-      <column name="espb" valueNumeric="5"/>
-      <column name="predavanja" valueNumeric="2"/>
-      <column name="vezbe" valueNumeric="2"/>
-      <column name="praktikum" valueNumeric="0"/>
-    </insert>
-    <insert tableName="predmet">
-      <column name="sifra" value="OAS117"/>
-      <column name="naziv" value="Upravljanje kvalitetom projekta"/>
-      <column name="espb" valueNumeric="6"/>
-      <column name="predavanja" valueNumeric="2"/>
-      <column name="vezbe" valueNumeric="2"/>
-      <column name="praktikum" valueNumeric="0"/>
-    </insert>
-    <insert tableName="predmet">
-      <column name="sifra" value="OAS118"/>
-      <column name="naziv" value="Upravljanje kvalitetom"/>
-      <column name="espb" valueNumeric="5"/>
-      <column name="predavanja" valueNumeric="2"/>
-      <column name="vezbe" valueNumeric="2"/>
-      <column name="praktikum" valueNumeric="0"/>
-    </insert>
-    <insert tableName="predmet">
-      <column name="sifra" value="OAS119"/>
-      <column name="naziv" value="Upravljanje lancima snabdevanja 1"/>
-      <column name="espb" valueNumeric="5"/>
-      <column name="predavanja" valueNumeric="2"/>
-      <column name="vezbe" valueNumeric="2"/>
-      <column name="praktikum" valueNumeric="0"/>
-    </insert>
-    <insert tableName="predmet">
-      <column name="sifra" value="OAS120"/>
-      <column name="naziv" value="Upravljanje malim i srednjim preduzecima"/>
-      <column name="espb" valueNumeric="6"/>
-      <column name="predavanja" valueNumeric="0"/>
-      <column name="vezbe" valueNumeric="0"/>
-      <column name="praktikum" valueNumeric="0"/>
-    </insert>
-    <insert tableName="predmet">
-      <column name="sifra" value="OAS121"/>
-      <column name="naziv" value="Upravljanje performansama i zaradama"/>
-      <column name="espb" valueNumeric="5"/>
-      <column name="predavanja" valueNumeric="2"/>
-      <column name="vezbe" valueNumeric="2"/>
-      <column name="praktikum" valueNumeric="0"/>
-    </insert>
-    <insert tableName="predmet">
-      <column name="sifra" value="OAS122"/>
-      <column name="naziv" value="Upravljanje projektima"/>
-      <column name="espb" valueNumeric="6"/>
-      <column name="predavanja" valueNumeric="2"/>
-      <column name="vezbe" valueNumeric="2"/>
-      <column name="praktikum" valueNumeric="0"/>
-    </insert>
-    <insert tableName="predmet">
-      <column name="sifra" value="OAS123"/>
-      <column name="naziv" value="Upravljanje promenama"/>
-      <column name="espb" valueNumeric="5"/>
-      <column name="predavanja" valueNumeric="2"/>
-      <column name="vezbe" valueNumeric="2"/>
-      <column name="praktikum" valueNumeric="0"/>
-    </insert>
-    <insert tableName="predmet">
-      <column name="sifra" value="OAS124"/>
-      <column name="naziv" value="Upravljanje troskovima"/>
-      <column name="espb" valueNumeric="6"/>
-      <column name="predavanja" valueNumeric="2"/>
-      <column name="vezbe" valueNumeric="2"/>
-      <column name="praktikum" valueNumeric="0"/>
-    </insert>
-    <insert tableName="predmet">
-      <column name="sifra" value="OAS125"/>
-      <column name="naziv" value="Uvod u finansijska trzista"/>
-      <column name="espb" valueNumeric="6"/>
-      <column name="predavanja" valueNumeric="2"/>
-      <column name="vezbe" valueNumeric="2"/>
-      <column name="praktikum" valueNumeric="0"/>
-    </insert>
-    <insert tableName="predmet">
-      <column name="sifra" value="OAS126"/>
-      <column name="naziv" value="Uvod u informacione sisteme"/>
-      <column name="espb" valueNumeric="6"/>
-      <column name="predavanja" valueNumeric="2"/>
-      <column name="vezbe" valueNumeric="2"/>
-      <column name="praktikum" valueNumeric="0"/>
-    </insert>
-    <insert tableName="predmet">
-      <column name="sifra" value="OAS127"/>
-      <column name="naziv" value="Uvod u informacione sisteme"/>
-      <column name="espb" valueNumeric="6"/>
-      <column name="predavanja" valueNumeric="2"/>
-      <column name="vezbe" valueNumeric="1"/>
-      <column name="praktikum" valueNumeric="1"/>
-    </insert>
-    <insert tableName="predmet">
-      <column name="sifra" value="OAS128"/>
-      <column name="naziv" value="Uvod u poslovnu analitiku"/>
-      <column name="espb" valueNumeric="6"/>
-      <column name="predavanja" valueNumeric="2"/>
-      <column name="vezbe" valueNumeric="2"/>
-      <column name="praktikum" valueNumeric="0"/>
-    </insert>
-    <insert tableName="predmet">
-      <column name="sifra" value="OAS129"/>
-      <column name="naziv" value="Vestacka inteligencija"/>
-      <column name="espb" valueNumeric="6"/>
-      <column name="predavanja" valueNumeric="2"/>
-      <column name="vezbe" valueNumeric="2"/>
-      <column name="praktikum" valueNumeric="0"/>
-    </insert>
-    <insert tableName="predmet">
-      <column name="sifra" value="OAS130"/>
-      <column name="naziv" value="Vrednovanje preduzeca"/>
-      <column name="espb" valueNumeric="5"/>
-      <column name="predavanja" valueNumeric="2"/>
-      <column name="vezbe" valueNumeric="2"/>
-      <column name="praktikum" valueNumeric="0"/>
-    </insert>
-    <insert tableName="predmet">
-      <column name="sifra" value="OAS131"/>
-      <column name="naziv" value="Zastita racunarskih sistema"/>
-      <column name="espb" valueNumeric="6"/>
-      <column name="predavanja" valueNumeric="2"/>
-      <column name="vezbe" valueNumeric="2"/>
-      <column name="praktikum" valueNumeric="0"/>
-    </insert>
-  </changeSet>
-</databaseChangeLog>
+      <column name="sifra" value="01.000001" />
+      <column name="naziv" value="Operaciona istraživanja 1" />
+      <column name="espb" valueNumeric="6" />
+      <column name="predavanja" valueNumeric="2" />
+      <column name="vezbe" valueNumeric="2" />
+      <column name="praktikum" valueNumeric="0" />
+      </insert>
+    <insert tableName="predmet">
+      <column name="sifra" value="01.000002" />
+      <column name="naziv" value="Industrijsko i menadžment inženjerstvo" />
+      <column name="espb" valueNumeric="6" />
+      <column name="predavanja" valueNumeric="2" />
+      <column name="vezbe" valueNumeric="2" />
+      <column name="praktikum" valueNumeric="0" />
+      </insert>
+    <insert tableName="predmet">
+      <column name="sifra" value="01.000003" />
+      <column name="naziv" value="Lin proizvodnja i usluge" />
+      <column name="espb" valueNumeric="5" />
+      <column name="predavanja" valueNumeric="2" />
+      <column name="vezbe" valueNumeric="2" />
+      <column name="praktikum" valueNumeric="0" />
+      </insert>
+    <insert tableName="predmet">
+      <column name="sifra" value="01.000004" />
+      <column name="naziv" value="Upravljanje projektima" />
+      <column name="espb" valueNumeric="6" />
+      <column name="predavanja" valueNumeric="2" />
+      <column name="vezbe" valueNumeric="2" />
+      <column name="praktikum" valueNumeric="0" />
+      </insert>
+    <insert tableName="predmet">
+      <column name="sifra" value="01.000005" />
+      <column name="naziv" value="Osnove finansijskog menadžmenta" />
+      <column name="espb" valueNumeric="6" />
+      <column name="predavanja" valueNumeric="2" />
+      <column name="vezbe" valueNumeric="2" />
+      <column name="praktikum" valueNumeric="0" />
+      </insert>
+    <insert tableName="predmet">
+      <column name="sifra" value="01.000006" />
+      <column name="naziv" value="Preduzetništvo" />
+      <column name="espb" valueNumeric="5" />
+      <column name="predavanja" valueNumeric="2" />
+      <column name="vezbe" valueNumeric="2" />
+      <column name="praktikum" valueNumeric="0" />
+      </insert>
+    <insert tableName="predmet">
+      <column name="sifra" value="01.000007" />
+      <column name="naziv" value="Operaciona istraživanja 2" />
+      <column name="espb" valueNumeric="6" />
+      <column name="predavanja" valueNumeric="2" />
+      <column name="vezbe" valueNumeric="2" />
+      <column name="praktikum" valueNumeric="0" />
+      </insert>
+    <insert tableName="predmet">
+      <column name="sifra" value="01.000008" />
+      <column name="naziv" value="Upravljanje promenama" />
+      <column name="espb" valueNumeric="5" />
+      <column name="predavanja" valueNumeric="2" />
+      <column name="vezbe" valueNumeric="2" />
+      <column name="praktikum" valueNumeric="0" />
+      </insert>
+    <insert tableName="predmet">
+      <column name="sifra" value="01.000009" />
+      <column name="naziv" value="Teorija odlučivanja" />
+      <column name="espb" valueNumeric="5" />
+      <column name="predavanja" valueNumeric="2" />
+      <column name="vezbe" valueNumeric="2" />
+      <column name="praktikum" valueNumeric="0" />
+      </insert>
+    <insert tableName="predmet">
+      <column name="sifra" value="01.000010" />
+      <column name="naziv" value="Projektovanje organizacije" />
+      <column name="espb" valueNumeric="5" />
+      <column name="predavanja" valueNumeric="2" />
+      <column name="vezbe" valueNumeric="2" />
+      <column name="praktikum" valueNumeric="0" />
+      </insert>
+    <insert tableName="predmet">
+      <column name="sifra" value="01.000011" />
+      <column name="naziv" value="Projektovanje proizvodnih i uslužnih sistema" />
+      <column name="espb" valueNumeric="5" />
+      <column name="predavanja" valueNumeric="2" />
+      <column name="vezbe" valueNumeric="2" />
+      <column name="praktikum" valueNumeric="0" />
+      </insert>
+    <insert tableName="predmet">
+      <column name="sifra" value="01.000012" />
+      <column name="naziv" value="Upravljanje performansama i zaradama" />
+      <column name="espb" valueNumeric="5" />
+      <column name="predavanja" valueNumeric="2" />
+      <column name="vezbe" valueNumeric="2" />
+      <column name="praktikum" valueNumeric="0" />
+      </insert>
+    <insert tableName="predmet">
+      <column name="sifra" value="01.000013" />
+      <column name="naziv" value="Upravljački sistemi" />
+      <column name="espb" valueNumeric="5" />
+      <column name="predavanja" valueNumeric="2" />
+      <column name="vezbe" valueNumeric="2" />
+      <column name="praktikum" valueNumeric="0" />
+      </insert>
+    <insert tableName="predmet">
+      <column name="sifra" value="01.000014" />
+      <column name="naziv" value="Simulacija u poslovnom odlučivanju" />
+      <column name="espb" valueNumeric="5" />
+      <column name="predavanja" valueNumeric="2" />
+      <column name="vezbe" valueNumeric="2" />
+      <column name="praktikum" valueNumeric="0" />
+      </insert>
+    <insert tableName="predmet">
+      <column name="sifra" value="01.000015" />
+      <column name="naziv" value="Ekološki menadžment" />
+      <column name="espb" valueNumeric="5" />
+      <column name="predavanja" valueNumeric="2" />
+      <column name="vezbe" valueNumeric="2" />
+      <column name="praktikum" valueNumeric="0" />
+      </insert>
+    <insert tableName="predmet">
+      <column name="sifra" value="01.000016" />
+      <column name="naziv" value="Upravljanje kvalitetom projekta" />
+      <column name="espb" valueNumeric="6" />
+      <column name="predavanja" valueNumeric="2" />
+      <column name="vezbe" valueNumeric="2" />
+      <column name="praktikum" valueNumeric="0" />
+      </insert>
+    <insert tableName="predmet">
+      <column name="sifra" value="01.000017" />
+      <column name="naziv" value="Ekonometrijske metode" />
+      <column name="espb" valueNumeric="6" />
+      <column name="predavanja" valueNumeric="2" />
+      <column name="vezbe" valueNumeric="2" />
+      <column name="praktikum" valueNumeric="0" />
+      </insert>
+    <insert tableName="predmet">
+      <column name="sifra" value="01.000018" />
+      <column name="naziv" value="Upravljanje investicijama" />
+      <column name="espb" valueNumeric="5" />
+      <column name="predavanja" valueNumeric="2" />
+      <column name="vezbe" valueNumeric="2" />
+      <column name="praktikum" valueNumeric="0" />
+      </insert>
+    <insert tableName="predmet">
+      <column name="sifra" value="01.000019" />
+      <column name="naziv" value="Upravljanje inovacionim projektima" />
+      <column name="espb" valueNumeric="5" />
+      <column name="predavanja" valueNumeric="2" />
+      <column name="vezbe" valueNumeric="2" />
+      <column name="praktikum" valueNumeric="0" />
+      </insert>
+    <insert tableName="predmet">
+      <column name="sifra" value="01.000020" />
+      <column name="naziv" value="Korporativne komunikacije" />
+      <column name="espb" valueNumeric="5" />
+      <column name="predavanja" valueNumeric="2" />
+      <column name="vezbe" valueNumeric="2" />
+      <column name="praktikum" valueNumeric="0" />
+      </insert>
+    <insert tableName="predmet">
+      <column name="sifra" value="01.000021" />
+      <column name="naziv" value="Strateški menadžment" />
+      <column name="espb" valueNumeric="5" />
+      <column name="predavanja" valueNumeric="2" />
+      <column name="vezbe" valueNumeric="2" />
+      <column name="praktikum" valueNumeric="0" />
+      </insert>
+    <insert tableName="predmet">
+      <column name="sifra" value="01.000022" />
+      <column name="naziv" value="Finansijska tržišta" />
+      <column name="espb" valueNumeric="6" />
+      <column name="predavanja" valueNumeric="2" />
+      <column name="vezbe" valueNumeric="1" />
+      <column name="praktikum" valueNumeric="1" />
+      </insert>
+    <insert tableName="predmet">
+      <column name="sifra" value="01.000023" />
+      <column name="naziv" value="Korporativne finansije" />
+      <column name="espb" valueNumeric="5" />
+      <column name="predavanja" valueNumeric="2" />
+      <column name="vezbe" valueNumeric="2" />
+      <column name="praktikum" valueNumeric="0" />
+      </insert>
+    <insert tableName="predmet">
+      <column name="sifra" value="01.000024" />
+      <column name="naziv" value="Brend menadžment" />
+      <column name="espb" valueNumeric="5" />
+      <column name="predavanja" valueNumeric="2" />
+      <column name="vezbe" valueNumeric="2" />
+      <column name="praktikum" valueNumeric="0" />
+      </insert>
+    <insert tableName="predmet">
+      <column name="sifra" value="01.000025" />
+      <column name="naziv" value="Vrednovanje preduzeća" />
+      <column name="espb" valueNumeric="5" />
+      <column name="predavanja" valueNumeric="2" />
+      <column name="vezbe" valueNumeric="2" />
+      <column name="praktikum" valueNumeric="0" />
+      </insert>
+    <insert tableName="predmet">
+      <column name="sifra" value="01.000027" />
+      <column name="naziv" value="Matematika 3" />
+      <column name="espb" valueNumeric="5" />
+      <column name="predavanja" valueNumeric="2" />
+      <column name="vezbe" valueNumeric="2" />
+      <column name="praktikum" valueNumeric="0" />
+      </insert>
+    <insert tableName="predmet">
+      <column name="sifra" value="01.000028" />
+      <column name="naziv" value="Lean logistika" />
+      <column name="espb" valueNumeric="5" />
+      <column name="predavanja" valueNumeric="2" />
+      <column name="vezbe" valueNumeric="2" />
+      <column name="praktikum" valueNumeric="0" />
+      </insert>
+    <insert tableName="predmet">
+      <column name="sifra" value="01.000029" />
+      <column name="naziv" value="Planiranje proizvodnje i usluga" />
+      <column name="espb" valueNumeric="6" />
+      <column name="predavanja" valueNumeric="2" />
+      <column name="vezbe" valueNumeric="2" />
+      <column name="praktikum" valueNumeric="0" />
+      </insert>
+    <insert tableName="predmet">
+      <column name="sifra" value="01.000030" />
+      <column name="naziv" value="Računarski integrisana proizvodnja" />
+      <column name="espb" valueNumeric="5" />
+      <column name="predavanja" valueNumeric="2" />
+      <column name="vezbe" valueNumeric="2" />
+      <column name="praktikum" valueNumeric="0" />
+      </insert>
+    <insert tableName="predmet">
+      <column name="sifra" value="01.000031" />
+      <column name="naziv" value="Tehnološko preduzetništvo" />
+      <column name="espb" valueNumeric="5" />
+      <column name="predavanja" valueNumeric="2" />
+      <column name="vezbe" valueNumeric="2" />
+      <column name="praktikum" valueNumeric="0" />
+      </insert>
+    <insert tableName="predmet">
+      <column name="sifra" value="01.000032" />
+      <column name="naziv" value="Upravljanje lancima snabdevanja 1" />
+      <column name="espb" valueNumeric="5" />
+      <column name="predavanja" valueNumeric="2" />
+      <column name="vezbe" valueNumeric="2" />
+      <column name="praktikum" valueNumeric="0" />
+      </insert>
+    <insert tableName="predmet">
+      <column name="sifra" value="01.000033" />
+      <column name="naziv" value="Sistem menadžmenta kvaliteta" />
+      <column name="espb" valueNumeric="5" />
+      <column name="predavanja" valueNumeric="2" />
+      <column name="vezbe" valueNumeric="2" />
+      <column name="praktikum" valueNumeric="0" />
+      </insert>
+    <insert tableName="predmet">
+      <column name="sifra" value="01.000034" />
+      <column name="naziv" value="Planiranje kvaliteta" />
+      <column name="espb" valueNumeric="5" />
+      <column name="predavanja" valueNumeric="2" />
+      <column name="vezbe" valueNumeric="2" />
+      <column name="praktikum" valueNumeric="0" />
+      </insert>
+    <insert tableName="predmet">
+      <column name="sifra" value="01.000035" />
+      <column name="naziv" value="Upravljanje kvalitetom" />
+      <column name="espb" valueNumeric="6" />
+      <column name="predavanja" valueNumeric="2" />
+      <column name="vezbe" valueNumeric="2" />
+      <column name="praktikum" valueNumeric="0" />
+      </insert>
+    <insert tableName="predmet">
+      <column name="sifra" value="01.000036" />
+      <column name="naziv" value="Metrologija i normativno regulisanje kvaliteta" />
+      <column name="espb" valueNumeric="5" />
+      <column name="predavanja" valueNumeric="2" />
+      <column name="vezbe" valueNumeric="2" />
+      <column name="praktikum" valueNumeric="0" />
+      </insert>
+    <insert tableName="predmet">
+      <column name="sifra" value="01.000037" />
+      <column name="naziv" value="životne sredine" />
+      <column name="espb" valueNumeric="5" />
+      <column name="predavanja" valueNumeric="2" />
+      <column name="vezbe" valueNumeric="2" />
+      <column name="praktikum" valueNumeric="0" />
+      </insert>
+    <insert tableName="predmet">
+      <column name="sifra" value="01.000038" />
+      <column name="naziv" value="Inženjering kvaliteta" />
+      <column name="espb" valueNumeric="5" />
+      <column name="predavanja" valueNumeric="2" />
+      <column name="vezbe" valueNumeric="2" />
+      <column name="praktikum" valueNumeric="0" />
+      </insert>
+    <insert tableName="predmet">
+      <column name="sifra" value="01.000039" />
+      <column name="naziv" value="Digitalni marketing" />
+      <column name="espb" valueNumeric="6" />
+      <column name="predavanja" valueNumeric="2" />
+      <column name="vezbe" valueNumeric="2" />
+      <column name="praktikum" valueNumeric="0" />
+      </insert>
+    <insert tableName="predmet">
+      <column name="sifra" value="01.000040" />
+      <column name="naziv" value="Strateški marketing" />
+      <column name="espb" valueNumeric="5" />
+      <column name="predavanja" valueNumeric="2" />
+      <column name="vezbe" valueNumeric="2" />
+      <column name="praktikum" valueNumeric="0" />
+      </insert>
+    <insert tableName="predmet">
+      <column name="sifra" value="01.000041" />
+      <column name="naziv" value="Menadžment prodaje" />
+      <column name="espb" valueNumeric="5" />
+      <column name="predavanja" valueNumeric="2" />
+      <column name="vezbe" valueNumeric="2" />
+      <column name="praktikum" valueNumeric="0" />
+      </insert>
+    <insert tableName="predmet">
+      <column name="sifra" value="01.000042" />
+      <column name="naziv" value="Softverska podrška upravljanju projektima" />
+      <column name="espb" valueNumeric="5" />
+      <column name="predavanja" valueNumeric="2" />
+      <column name="vezbe" valueNumeric="2" />
+      <column name="praktikum" valueNumeric="0" />
+      </insert>
+    <insert tableName="predmet">
+      <column name="sifra" value="01.000053" />
+      <column name="naziv" value="Analitika performansi - osnovni koncepti" />
+      <column name="espb" valueNumeric="5" />
+      <column name="predavanja" valueNumeric="2" />
+      <column name="vezbe" valueNumeric="2" />
+      <column name="praktikum" valueNumeric="0" />
+      </insert>
+    <insert tableName="predmet">
+      <column name="sifra" value="01.EP0001" />
+      <column name="naziv" value="Elektronsko poslovanje" />
+      <column name="espb" valueNumeric="5" />
+      <column name="predavanja" valueNumeric="2" />
+      <column name="vezbe" valueNumeric="2" />
+      <column name="praktikum" valueNumeric="0" />
+      </insert>
+    <insert tableName="predmet">
+      <column name="sifra" value="01.I00001" />
+      <column name="naziv" value="Statistička kontrola procesa" />
+      <column name="espb" valueNumeric="5" />
+      <column name="predavanja" valueNumeric="2" />
+      <column name="vezbe" valueNumeric="2" />
+      <column name="praktikum" valueNumeric="0" />
+      </insert>
+    <insert tableName="predmet">
+      <column name="sifra" value="01.I00002" />
+      <column name="naziv" value="Kontrola kvaliteta" />
+      <column name="espb" valueNumeric="5" />
+      <column name="predavanja" valueNumeric="2" />
+      <column name="vezbe" valueNumeric="1" />
+      <column name="praktikum" valueNumeric="1" />
+      </insert>
+    <insert tableName="predmet">
+      <column name="sifra" value="01.I00003" />
+      <column name="naziv" value="Upravljanje dokumentacijom" />
+      <column name="espb" valueNumeric="5" />
+      <column name="predavanja" valueNumeric="2" />
+      <column name="vezbe" valueNumeric="1" />
+      <column name="praktikum" valueNumeric="1" />
+      </insert>
+    <insert tableName="predmet">
+      <column name="sifra" value="01.I00005" />
+      <column name="naziv" value="Osnove programiranja" />
+      <column name="espb" valueNumeric="5" />
+      <column name="predavanja" valueNumeric="2" />
+      <column name="vezbe" valueNumeric="1" />
+      <column name="praktikum" valueNumeric="1" />
+      </insert>
+    <insert tableName="predmet">
+      <column name="sifra" value="01.I00006" />
+      <column name="naziv" value="Upravljanje inovacijama" />
+      <column name="espb" valueNumeric="5" />
+      <column name="predavanja" valueNumeric="2" />
+      <column name="vezbe" valueNumeric="1" />
+      <column name="praktikum" valueNumeric="1" />
+      </insert>
+    <insert tableName="predmet">
+      <column name="sifra" value="01.I00007" />
+      <column name="naziv" value="Rukovođenje i liderstvo" />
+      <column name="espb" valueNumeric="5" />
+      <column name="predavanja" valueNumeric="2" />
+      <column name="vezbe" valueNumeric="2" />
+      <column name="praktikum" valueNumeric="0" />
+      </insert>
+    <insert tableName="predmet">
+      <column name="sifra" value="01.I00008" />
+      <column name="naziv" value="Utvrđivanje normativa rada i učinka" />
+      <column name="espb" valueNumeric="5" />
+      <column name="predavanja" valueNumeric="2" />
+      <column name="vezbe" valueNumeric="2" />
+      <column name="praktikum" valueNumeric="0" />
+      </insert>
+    <insert tableName="predmet">
+      <column name="sifra" value="01.I00009" />
+      <column name="naziv" value="Organizacija specijalnih događaja" />
+      <column name="espb" valueNumeric="5" />
+      <column name="predavanja" valueNumeric="2" />
+      <column name="vezbe" valueNumeric="2" />
+      <column name="praktikum" valueNumeric="0" />
+      </insert>
+    <insert tableName="predmet">
+      <column name="sifra" value="01.I00010" />
+      <column name="naziv" value="Organizacija javne uprave" />
+      <column name="espb" valueNumeric="5" />
+      <column name="predavanja" valueNumeric="2" />
+      <column name="vezbe" valueNumeric="2" />
+      <column name="praktikum" valueNumeric="0" />
+      </insert>
+    <insert tableName="predmet">
+      <column name="sifra" value="01.I00011" />
+      <column name="naziv" value="Poslovne aplikacije u spredšit okruženju" />
+      <column name="espb" valueNumeric="5" />
+      <column name="predavanja" valueNumeric="2" />
+      <column name="vezbe" valueNumeric="2" />
+      <column name="praktikum" valueNumeric="0" />
+      </insert>
+    <insert tableName="predmet">
+      <column name="sifra" value="01.I00012" />
+      <column name="naziv" value="Privredni razvoj" />
+      <column name="espb" valueNumeric="5" />
+      <column name="predavanja" valueNumeric="2" />
+      <column name="vezbe" valueNumeric="2" />
+      <column name="praktikum" valueNumeric="0" />
+      </insert>
+    <insert tableName="predmet">
+      <column name="sifra" value="01.I00014" />
+      <column name="naziv" value="Poslovna analitika" />
+      <column name="espb" valueNumeric="5" />
+      <column name="predavanja" valueNumeric="2" />
+      <column name="vezbe" valueNumeric="2" />
+      <column name="praktikum" valueNumeric="0" />
+      </insert>
+    <insert tableName="predmet">
+      <column name="sifra" value="01.I00015" />
+      <column name="naziv" value="Analiza podataka" />
+      <column name="espb" valueNumeric="5" />
+      <column name="predavanja" valueNumeric="2" />
+      <column name="vezbe" valueNumeric="2" />
+      <column name="praktikum" valueNumeric="0" />
+      </insert>
+    <insert tableName="predmet">
+      <column name="sifra" value="01.I00016" />
+      <column name="naziv" value="Teorija igara" />
+      <column name="espb" valueNumeric="5" />
+      <column name="predavanja" valueNumeric="2" />
+      <column name="vezbe" valueNumeric="2" />
+      <column name="praktikum" valueNumeric="0" />
+      </insert>
+    <insert tableName="predmet">
+      <column name="sifra" value="01.I00017" />
+      <column name="naziv" value="Mašinsko učenje" />
+      <column name="espb" valueNumeric="5" />
+      <column name="predavanja" valueNumeric="2" />
+      <column name="vezbe" valueNumeric="1" />
+      <column name="praktikum" valueNumeric="1" />
+      </insert>
+    <insert tableName="predmet">
+      <column name="sifra" value="01.I00018" />
+      <column name="naziv" value="Simulacioni modeli u finansijama" />
+      <column name="espb" valueNumeric="5" />
+      <column name="predavanja" valueNumeric="2" />
+      <column name="vezbe" valueNumeric="2" />
+      <column name="praktikum" valueNumeric="0" />
+      </insert>
+    <insert tableName="predmet">
+      <column name="sifra" value="01.I00019" />
+      <column name="naziv" value="Upravljačko računovodstvo" />
+      <column name="espb" valueNumeric="5" />
+      <column name="predavanja" valueNumeric="2" />
+      <column name="vezbe" valueNumeric="2" />
+      <column name="praktikum" valueNumeric="0" />
+      </insert>
+    <insert tableName="predmet">
+      <column name="sifra" value="01.I00020" />
+      <column name="naziv" value="Upravljanje troškovima" />
+      <column name="espb" valueNumeric="5" />
+      <column name="predavanja" valueNumeric="2" />
+      <column name="vezbe" valueNumeric="2" />
+      <column name="praktikum" valueNumeric="0" />
+      </insert>
+    <insert tableName="predmet">
+      <column name="sifra" value="01.I00023" />
+      <column name="naziv" value="Trening i razvoj" />
+      <column name="espb" valueNumeric="5" />
+      <column name="predavanja" valueNumeric="2" />
+      <column name="vezbe" valueNumeric="2" />
+      <column name="praktikum" valueNumeric="0" />
+      </insert>
+    <insert tableName="predmet">
+      <column name="sifra" value="01.I00024" />
+      <column name="naziv" value="Vođstvo i motivisanje" />
+      <column name="espb" valueNumeric="5" />
+      <column name="predavanja" valueNumeric="2" />
+      <column name="vezbe" valueNumeric="2" />
+      <column name="praktikum" valueNumeric="0" />
+      </insert>
+    <insert tableName="predmet">
+      <column name="sifra" value="01.I00025" />
+      <column name="naziv" value="Međunarodni menadžment" />
+      <column name="espb" valueNumeric="5" />
+      <column name="predavanja" valueNumeric="2" />
+      <column name="vezbe" valueNumeric="2" />
+      <column name="praktikum" valueNumeric="0" />
+      </insert>
+    <insert tableName="predmet">
+      <column name="sifra" value="01.I00026" />
+      <column name="naziv" value="Statističke metode u menadžmentu" />
+      <column name="espb" valueNumeric="5" />
+      <column name="predavanja" valueNumeric="2" />
+      <column name="vezbe" valueNumeric="2" />
+      <column name="praktikum" valueNumeric="0" />
+      </insert>
+    <insert tableName="predmet">
+      <column name="sifra" value="01.I00028" />
+      <column name="naziv" value="Intelektualna svojina" />
+      <column name="espb" valueNumeric="5" />
+      <column name="predavanja" valueNumeric="2" />
+      <column name="vezbe" valueNumeric="2" />
+      <column name="praktikum" valueNumeric="0" />
+      </insert>
+    <insert tableName="predmet">
+      <column name="sifra" value="01.I00029" />
+      <column name="naziv" value="Engleski jezik u menadžmentu 2" />
+      <column name="espb" valueNumeric="5" />
+      <column name="predavanja" valueNumeric="2" />
+      <column name="vezbe" valueNumeric="2" />
+      <column name="praktikum" valueNumeric="0" />
+      </insert>
+    <insert tableName="predmet">
+      <column name="sifra" value="01.I00030" />
+      <column name="naziv" value="Francuski jezik u menadžmentu 2" />
+      <column name="espb" valueNumeric="5" />
+      <column name="predavanja" valueNumeric="2" />
+      <column name="vezbe" valueNumeric="2" />
+      <column name="praktikum" valueNumeric="0" />
+      </insert>
+    <insert tableName="predmet">
+      <column name="sifra" value="01.I00031" />
+      <column name="naziv" value="Poslovno pravo" />
+      <column name="espb" valueNumeric="5" />
+      <column name="predavanja" valueNumeric="2" />
+      <column name="vezbe" valueNumeric="2" />
+      <column name="praktikum" valueNumeric="0" />
+      </insert>
+    <insert tableName="predmet">
+      <column name="sifra" value="01.I00032" />
+      <column name="naziv" value="Menadžment proizvodnje i pružanja usluga" />
+      <column name="espb" valueNumeric="5" />
+      <column name="predavanja" valueNumeric="2" />
+      <column name="vezbe" valueNumeric="2" />
+      <column name="praktikum" valueNumeric="0" />
+      </insert>
+    <insert tableName="predmet">
+      <column name="sifra" value="01.I00033" />
+      <column name="naziv" value="Bankarski menadžment" />
+      <column name="espb" valueNumeric="5" />
+      <column name="predavanja" valueNumeric="2" />
+      <column name="vezbe" valueNumeric="2" />
+      <column name="praktikum" valueNumeric="0" />
+      </insert>
+    <insert tableName="predmet">
+      <column name="sifra" value="01.I00034" />
+      <column name="naziv" value="Finansijsko izveštavanje" />
+      <column name="espb" valueNumeric="5" />
+      <column name="predavanja" valueNumeric="2" />
+      <column name="vezbe" valueNumeric="2" />
+      <column name="praktikum" valueNumeric="0" />
+      </insert>
+    <insert tableName="predmet">
+      <column name="sifra" value="01.I00035" />
+      <column name="naziv" value="Finansijske tehnologije" />
+      <column name="espb" valueNumeric="5" />
+      <column name="predavanja" valueNumeric="2" />
+      <column name="vezbe" valueNumeric="2" />
+      <column name="praktikum" valueNumeric="0" />
+      </insert>
+    <insert tableName="predmet">
+      <column name="sifra" value="01.I00036" />
+      <column name="naziv" value="Korporativno restrukturiranje" />
+      <column name="espb" valueNumeric="5" />
+      <column name="predavanja" valueNumeric="2" />
+      <column name="vezbe" valueNumeric="2" />
+      <column name="praktikum" valueNumeric="0" />
+      </insert>
+    <insert tableName="predmet">
+      <column name="sifra" value="01.I00037" />
+      <column name="naziv" value="Investiciono bankarstvo" />
+      <column name="espb" valueNumeric="5" />
+      <column name="predavanja" valueNumeric="2" />
+      <column name="vezbe" valueNumeric="2" />
+      <column name="praktikum" valueNumeric="0" />
+      </insert>
+    <insert tableName="predmet">
+      <column name="sifra" value="01.I00038" />
+      <column name="naziv" value="Finansijska analiza prodaje" />
+      <column name="espb" valueNumeric="5" />
+      <column name="predavanja" valueNumeric="2" />
+      <column name="vezbe" valueNumeric="2" />
+      <column name="praktikum" valueNumeric="0" />
+      </insert>
+    <insert tableName="predmet">
+      <column name="sifra" value="01.I00039" />
+      <column name="naziv" value="Modelovanje finansijskih sistema" />
+      <column name="espb" valueNumeric="5" />
+      <column name="predavanja" valueNumeric="2" />
+      <column name="vezbe" valueNumeric="2" />
+      <column name="praktikum" valueNumeric="0" />
+      </insert>
+    <insert tableName="predmet">
+      <column name="sifra" value="01.I00040" />
+      <column name="naziv" value="Finansijska matematika" />
+      <column name="espb" valueNumeric="5" />
+      <column name="predavanja" valueNumeric="2" />
+      <column name="vezbe" valueNumeric="2" />
+      <column name="praktikum" valueNumeric="0" />
+      </insert>
+    <insert tableName="predmet">
+      <column name="sifra" value="01.I00041" />
+      <column name="naziv" value="Digitalno upravljanje proizvodnjom" />
+      <column name="espb" valueNumeric="5" />
+      <column name="predavanja" valueNumeric="2" />
+      <column name="vezbe" valueNumeric="2" />
+      <column name="praktikum" valueNumeric="0" />
+      </insert>
+    <insert tableName="predmet">
+      <column name="sifra" value="01.I00042" />
+      <column name="naziv" value="Menadžment ključnih performansi proizvodnje" />
+      <column name="espb" valueNumeric="5" />
+      <column name="predavanja" valueNumeric="2" />
+      <column name="vezbe" valueNumeric="2" />
+      <column name="praktikum" valueNumeric="0" />
+      </insert>
+    <insert tableName="predmet">
+      <column name="sifra" value="01.I00043" />
+      <column name="naziv" value="Broj ESPB: 5" />
+      <column name="espb" valueNumeric="5" />
+      <column name="predavanja" valueNumeric="2" />
+      <column name="vezbe" valueNumeric="2" />
+      <column name="praktikum" valueNumeric="0" />
+      </insert>
+    <insert tableName="predmet">
+      <column name="sifra" value="01.I00044" />
+      <column name="naziv" value="Analiza i menadžment vrednosti" />
+      <column name="espb" valueNumeric="5" />
+      <column name="predavanja" valueNumeric="2" />
+      <column name="vezbe" valueNumeric="2" />
+      <column name="praktikum" valueNumeric="0" />
+      </insert>
+    <insert tableName="predmet">
+      <column name="sifra" value="01.I00045" />
+      <column name="naziv" value="Upravljanje održavanjem" />
+      <column name="espb" valueNumeric="5" />
+      <column name="predavanja" valueNumeric="2" />
+      <column name="vezbe" valueNumeric="2" />
+      <column name="praktikum" valueNumeric="0" />
+      </insert>
+    <insert tableName="predmet">
+      <column name="sifra" value="01.I00046" />
+      <column name="naziv" value="Fleksibilne usluge i proizvodnja" />
+      <column name="espb" valueNumeric="5" />
+      <column name="predavanja" valueNumeric="2" />
+      <column name="vezbe" valueNumeric="2" />
+      <column name="praktikum" valueNumeric="0" />
+      </insert>
+    <insert tableName="predmet">
+      <column name="sifra" value="01.I00047" />
+      <column name="naziv" value="Inteligentna proizvodnja" />
+      <column name="espb" valueNumeric="5" />
+      <column name="predavanja" valueNumeric="2" />
+      <column name="vezbe" valueNumeric="2" />
+      <column name="praktikum" valueNumeric="0" />
+      </insert>
+    <insert tableName="predmet">
+      <column name="sifra" value="01.I00048" />
+      <column name="naziv" value="Marketing logistika" />
+      <column name="espb" valueNumeric="5" />
+      <column name="predavanja" valueNumeric="2" />
+      <column name="vezbe" valueNumeric="2" />
+      <column name="praktikum" valueNumeric="0" />
+      </insert>
+    <insert tableName="predmet">
+      <column name="sifra" value="01.I00049" />
+      <column name="naziv" value="Metode optimizacije" />
+      <column name="espb" valueNumeric="5" />
+      <column name="predavanja" valueNumeric="2" />
+      <column name="vezbe" valueNumeric="2" />
+      <column name="praktikum" valueNumeric="0" />
+      </insert>
+    <insert tableName="predmet">
+      <column name="sifra" value="01.I00051" />
+      <column name="naziv" value="Komercijalizacija tehnologije" />
+      <column name="espb" valueNumeric="5" />
+      <column name="predavanja" valueNumeric="2" />
+      <column name="vezbe" valueNumeric="2" />
+      <column name="praktikum" valueNumeric="0" />
+      </insert>
+    <insert tableName="predmet">
+      <column name="sifra" value="01.I00052" />
+      <column name="naziv" value="Metode tehnološke analize" />
+      <column name="espb" valueNumeric="5" />
+      <column name="predavanja" valueNumeric="2" />
+      <column name="vezbe" valueNumeric="2" />
+      <column name="praktikum" valueNumeric="0" />
+      </insert>
+    <insert tableName="predmet">
+      <column name="sifra" value="01.I00053" />
+      <column name="naziv" value="Eko-marketing" />
+      <column name="espb" valueNumeric="5" />
+      <column name="predavanja" valueNumeric="2" />
+      <column name="vezbe" valueNumeric="2" />
+      <column name="praktikum" valueNumeric="0" />
+      </insert>
+    <insert tableName="predmet">
+      <column name="sifra" value="01.I00054" />
+      <column name="naziv" value="Analiza pouzdanosti i rizika" />
+      <column name="espb" valueNumeric="5" />
+      <column name="predavanja" valueNumeric="2" />
+      <column name="vezbe" valueNumeric="2" />
+      <column name="praktikum" valueNumeric="0" />
+      </insert>
+    <insert tableName="predmet">
+      <column name="sifra" value="01.I00055" />
+      <column name="naziv" value="E-obrazovanje" />
+      <column name="espb" valueNumeric="5" />
+      <column name="predavanja" valueNumeric="2" />
+      <column name="vezbe" valueNumeric="2" />
+      <column name="praktikum" valueNumeric="0" />
+      </insert>
+    <insert tableName="predmet">
+      <column name="sifra" value="01.I00056" />
+      <column name="naziv" value="Ocena kvaliteta poslovnog sistema" />
+      <column name="espb" valueNumeric="5" />
+      <column name="predavanja" valueNumeric="2" />
+      <column name="vezbe" valueNumeric="2" />
+      <column name="praktikum" valueNumeric="0" />
+      </insert>
+    <insert tableName="predmet">
+      <column name="sifra" value="01.I00057" />
+      <column name="naziv" value="Modeli i indikatori poboljšavanja kvaliteta" />
+      <column name="espb" valueNumeric="5" />
+      <column name="predavanja" valueNumeric="2" />
+      <column name="vezbe" valueNumeric="2" />
+      <column name="praktikum" valueNumeric="0" />
+      </insert>
+    <insert tableName="predmet">
+      <column name="sifra" value="01.I00058" />
+      <column name="naziv" value="Menadžment totalnog kvaliteta" />
+      <column name="espb" valueNumeric="5" />
+      <column name="predavanja" valueNumeric="2" />
+      <column name="vezbe" valueNumeric="2" />
+      <column name="praktikum" valueNumeric="0" />
+      </insert>
+    <insert tableName="predmet">
+      <column name="sifra" value="01.I00059" />
+      <column name="naziv" value="Menadžment kvaliteta 1" />
+      <column name="espb" valueNumeric="5" />
+      <column name="predavanja" valueNumeric="2" />
+      <column name="vezbe" valueNumeric="2" />
+      <column name="praktikum" valueNumeric="0" />
+      </insert>
+    <insert tableName="predmet">
+      <column name="sifra" value="01.I00060" />
+      <column name="naziv" value="Menadžment kvaliteta 2" />
+      <column name="espb" valueNumeric="5" />
+      <column name="predavanja" valueNumeric="2" />
+      <column name="vezbe" valueNumeric="2" />
+      <column name="praktikum" valueNumeric="0" />
+      </insert>
+    <insert tableName="predmet">
+      <column name="sifra" value="01.I00061" />
+      <column name="naziv" value="Standardizacija terminologija" />
+      <column name="espb" valueNumeric="5" />
+      <column name="predavanja" valueNumeric="2" />
+      <column name="vezbe" valueNumeric="2" />
+      <column name="praktikum" valueNumeric="0" />
+      </insert>
+    <insert tableName="predmet">
+      <column name="sifra" value="01.I00062" />
+      <column name="naziv" value="Akreditacija i sertifikacija" />
+      <column name="espb" valueNumeric="5" />
+      <column name="predavanja" valueNumeric="2" />
+      <column name="vezbe" valueNumeric="2" />
+      <column name="praktikum" valueNumeric="0" />
+      </insert>
+    <insert tableName="predmet">
+      <column name="sifra" value="01.I00063" />
+      <column name="naziv" value="Menadžment kvaliteta u upravi" />
+      <column name="espb" valueNumeric="5" />
+      <column name="predavanja" valueNumeric="2" />
+      <column name="vezbe" valueNumeric="2" />
+      <column name="praktikum" valueNumeric="0" />
+      </insert>
+    <insert tableName="predmet">
+      <column name="sifra" value="01.I00064" />
+      <column name="naziv" value="Sistem menadžmenta sigurnosti informacija" />
+      <column name="espb" valueNumeric="5" />
+      <column name="predavanja" valueNumeric="2" />
+      <column name="vezbe" valueNumeric="2" />
+      <column name="praktikum" valueNumeric="0" />
+      </insert>
+    <insert tableName="predmet">
+      <column name="sifra" value="01.I00065" />
+      <column name="naziv" value="Obezbeđivanje kvaliteta u softverskoj industriji" />
+      <column name="espb" valueNumeric="5" />
+      <column name="predavanja" valueNumeric="2" />
+      <column name="vezbe" valueNumeric="2" />
+      <column name="praktikum" valueNumeric="0" />
+      </insert>
+    <insert tableName="predmet">
+      <column name="sifra" value="01.I00066" />
+      <column name="naziv" value="tehnologijama" />
+      <column name="espb" valueNumeric="5" />
+      <column name="predavanja" valueNumeric="2" />
+      <column name="vezbe" valueNumeric="2" />
+      <column name="praktikum" valueNumeric="0" />
+      </insert>
+    <insert tableName="predmet">
+      <column name="sifra" value="01.I00067" />
+      <column name="naziv" value="tehnologijama" />
+      <column name="espb" valueNumeric="5" />
+      <column name="predavanja" valueNumeric="2" />
+      <column name="vezbe" valueNumeric="2" />
+      <column name="praktikum" valueNumeric="0" />
+      </insert>
+    <insert tableName="predmet">
+      <column name="sifra" value="01.I00068" />
+      <column name="naziv" value="Interpersonalne veštine u organizaciji" />
+      <column name="espb" valueNumeric="5" />
+      <column name="predavanja" valueNumeric="2" />
+      <column name="vezbe" valueNumeric="2" />
+      <column name="praktikum" valueNumeric="0" />
+      </insert>
+    <insert tableName="predmet">
+      <column name="sifra" value="01.I00072" />
+      <column name="naziv" value="Ponašanje potrošača" />
+      <column name="espb" valueNumeric="5" />
+      <column name="predavanja" valueNumeric="2" />
+      <column name="vezbe" valueNumeric="2" />
+      <column name="praktikum" valueNumeric="0" />
+      </insert>
+    <insert tableName="predmet">
+      <column name="sifra" value="01.I00074" />
+      <column name="naziv" value="Proučavanje studija slučaja" />
+      <column name="espb" valueNumeric="5" />
+      <column name="predavanja" valueNumeric="2" />
+      <column name="vezbe" valueNumeric="2" />
+      <column name="praktikum" valueNumeric="0" />
+      </insert>
+    <insert tableName="predmet">
+      <column name="sifra" value="01.I00075" />
+      <column name="naziv" value="Poslovno pregovaranje i veštine komunikacije" />
+      <column name="espb" valueNumeric="5" />
+      <column name="predavanja" valueNumeric="2" />
+      <column name="vezbe" valueNumeric="2" />
+      <column name="praktikum" valueNumeric="0" />
+      </insert>
+    <insert tableName="predmet">
+      <column name="sifra" value="01.I00076" />
+      <column name="naziv" value="Međunarodni marketing" />
+      <column name="espb" valueNumeric="5" />
+      <column name="predavanja" valueNumeric="2" />
+      <column name="vezbe" valueNumeric="2" />
+      <column name="praktikum" valueNumeric="0" />
+      </insert>
+    <insert tableName="predmet">
+      <column name="sifra" value="01.I00077" />
+      <column name="naziv" value="Medijske komunikacije" />
+      <column name="espb" valueNumeric="5" />
+      <column name="predavanja" valueNumeric="2" />
+      <column name="vezbe" valueNumeric="2" />
+      <column name="praktikum" valueNumeric="0" />
+      </insert>
+    <insert tableName="predmet">
+      <column name="sifra" value="01.I00136" />
+      <column name="naziv" value="Engleski jezik za akademske namene" />
+      <column name="espb" valueNumeric="5" />
+      <column name="predavanja" valueNumeric="2" />
+      <column name="vezbe" valueNumeric="2" />
+      <column name="praktikum" valueNumeric="0" />
+      </insert>
+    <insert tableName="predmet">
+      <column name="sifra" value="01.I00137" />
+      <column name="naziv" value="Francuski jezik za akademske namene" />
+      <column name="espb" valueNumeric="5" />
+      <column name="predavanja" valueNumeric="2" />
+      <column name="vezbe" valueNumeric="2" />
+      <column name="praktikum" valueNumeric="0" />
+      </insert>
+    <insert tableName="predmet">
+      <column name="sifra" value="01.IS0001" />
+      <column name="naziv" value="Uvod u informacione sisteme" />
+      <column name="espb" valueNumeric="6" />
+      <column name="predavanja" valueNumeric="2" />
+      <column name="vezbe" valueNumeric="2" />
+      <column name="praktikum" valueNumeric="0" />
+      </insert>
+    <insert tableName="predmet">
+      <column name="sifra" value="01.IS0011" />
+      <column name="naziv" value="Modelovanje poslovnih procesa" />
+      <column name="espb" valueNumeric="5" />
+      <column name="predavanja" valueNumeric="2" />
+      <column name="vezbe" valueNumeric="2" />
+      <column name="praktikum" valueNumeric="0" />
+      </insert>
+    <insert tableName="predmet">
+      <column name="sifra" value="01.IS0012" />
+      <column name="naziv" value="Poslovni informacioni sistemi" />
+      <column name="espb" valueNumeric="5" />
+      <column name="predavanja" valueNumeric="2" />
+      <column name="vezbe" valueNumeric="1" />
+      <column name="praktikum" valueNumeric="1" />
+      </insert>
+    <insert tableName="predmet">
+      <column name="sifra" value="01.IT0001" />
+      <column name="naziv" value="Osnove informaciono komunikacionih tehnologija" />
+      <column name="espb" valueNumeric="6" />
+      <column name="predavanja" valueNumeric="2" />
+      <column name="vezbe" valueNumeric="1" />
+      <column name="praktikum" valueNumeric="1" />
+      </insert>
+    <insert tableName="predmet">
+      <column name="sifra" value="01.IT0006" />
+      <column name="naziv" value="Multimediji" />
+      <column name="espb" valueNumeric="5" />
+      <column name="predavanja" valueNumeric="2" />
+      <column name="vezbe" valueNumeric="2" />
+      <column name="praktikum" valueNumeric="0" />
+      </insert>
+    <insert tableName="predmet">
+      <column name="sifra" value="01.PO0001" />
+      <column name="naziv" value="Poslovna inteligencija" />
+      <column name="espb" valueNumeric="5" />
+      <column name="predavanja" valueNumeric="2" />
+      <column name="vezbe" valueNumeric="2" />
+      <column name="praktikum" valueNumeric="0" />
+      </insert>
+    <insert tableName="predmet">
+      <column name="sifra" value="01.US0003" />
+      <column name="naziv" value="Osnove računarske inteligencije" />
+      <column name="espb" valueNumeric="5" />
+      <column name="predavanja" valueNumeric="2" />
+      <column name="vezbe" valueNumeric="1" />
+      <column name="praktikum" valueNumeric="1" />
+      </insert>
+    <insert tableName="predmet">
+      <column name="sifra" value="01.Z00001" />
+      <column name="naziv" value="Menadžment" />
+      <column name="espb" valueNumeric="6" />
+      <column name="predavanja" valueNumeric="2" />
+      <column name="vezbe" valueNumeric="2" />
+      <column name="praktikum" valueNumeric="0" />
+      </insert>
+    <insert tableName="predmet">
+      <column name="sifra" value="01.Z00002" />
+      <column name="naziv" value="Matematika 1" />
+      <column name="espb" valueNumeric="6" />
+      <column name="predavanja" valueNumeric="2" />
+      <column name="vezbe" valueNumeric="2" />
+      <column name="praktikum" valueNumeric="0" />
+      </insert>
+    <insert tableName="predmet">
+      <column name="sifra" value="01.Z00003" />
+      <column name="naziv" value="Ekonomija" />
+      <column name="espb" valueNumeric="6" />
+      <column name="predavanja" valueNumeric="2" />
+      <column name="vezbe" valueNumeric="2" />
+      <column name="praktikum" valueNumeric="0" />
+      </insert>
+    <insert tableName="predmet">
+      <column name="sifra" value="01.Z00005" />
+      <column name="naziv" value="Osnovi organizacije" />
+      <column name="espb" valueNumeric="6" />
+      <column name="predavanja" valueNumeric="2" />
+      <column name="vezbe" valueNumeric="2" />
+      <column name="praktikum" valueNumeric="0" />
+      </insert>
+    <insert tableName="predmet">
+      <column name="sifra" value="01.Z00006" />
+      <column name="naziv" value="Matematika 2" />
+      <column name="espb" valueNumeric="6" />
+      <column name="predavanja" valueNumeric="2" />
+      <column name="vezbe" valueNumeric="2" />
+      <column name="praktikum" valueNumeric="0" />
+      </insert>
+    <insert tableName="predmet">
+      <column name="sifra" value="01.Z00007" />
+      <column name="naziv" value="Psihologija" />
+      <column name="espb" valueNumeric="6" />
+      <column name="predavanja" valueNumeric="2" />
+      <column name="vezbe" valueNumeric="2" />
+      <column name="praktikum" valueNumeric="0" />
+      </insert>
+    <insert tableName="predmet">
+      <column name="sifra" value="01.Z00008" />
+      <column name="naziv" value="Sociologija" />
+      <column name="espb" valueNumeric="6" />
+      <column name="predavanja" valueNumeric="2" />
+      <column name="vezbe" valueNumeric="2" />
+      <column name="praktikum" valueNumeric="0" />
+      </insert>
+    <insert tableName="predmet">
+      <column name="sifra" value="01.Z00010" />
+      <column name="naziv" value="Teorija verovatnoće" />
+      <column name="espb" valueNumeric="6" />
+      <column name="predavanja" valueNumeric="2" />
+      <column name="vezbe" valueNumeric="2" />
+      <column name="praktikum" valueNumeric="0" />
+      </insert>
+    <insert tableName="predmet">
+      <column name="sifra" value="01.Z00011" />
+      <column name="naziv" value="Računovodstvo" />
+      <column name="espb" valueNumeric="6" />
+      <column name="predavanja" valueNumeric="2" />
+      <column name="vezbe" valueNumeric="2" />
+      <column name="praktikum" valueNumeric="0" />
+      </insert>
+    <insert tableName="predmet">
+      <column name="sifra" value="01.Z00012" />
+      <column name="naziv" value="Marketing" />
+      <column name="espb" valueNumeric="6" />
+      <column name="predavanja" valueNumeric="2" />
+      <column name="vezbe" valueNumeric="2" />
+      <column name="praktikum" valueNumeric="0" />
+      </insert>
+    <insert tableName="predmet">
+      <column name="sifra" value="01.Z00013" />
+      <column name="naziv" value="Osnove kvaliteta" />
+      <column name="espb" valueNumeric="6" />
+      <column name="predavanja" valueNumeric="2" />
+      <column name="vezbe" valueNumeric="2" />
+      <column name="praktikum" valueNumeric="0" />
+      </insert>
+    <insert tableName="predmet">
+      <column name="sifra" value="01.Z00014" />
+      <column name="naziv" value="Menadžment ljudskih resursa" />
+      <column name="espb" valueNumeric="6" />
+      <column name="predavanja" valueNumeric="2" />
+      <column name="vezbe" valueNumeric="2" />
+      <column name="praktikum" valueNumeric="0" />
+      </insert>
+    <insert tableName="predmet">
+      <column name="sifra" value="01.Z00015" />
+      <column name="naziv" value="Ekonomika poslovanja i planiranje" />
+      <column name="espb" valueNumeric="5" />
+      <column name="predavanja" valueNumeric="2" />
+      <column name="vezbe" valueNumeric="2" />
+      <column name="praktikum" valueNumeric="0" />
+      </insert>
+    <insert tableName="predmet">
+      <column name="sifra" value="01.Z00016" />
+      <column name="naziv" value="Statistika" />
+      <column name="espb" valueNumeric="5" />
+      <column name="predavanja" valueNumeric="2" />
+      <column name="vezbe" valueNumeric="2" />
+      <column name="praktikum" valueNumeric="0" />
+      </insert>
+    <insert tableName="predmet">
+      <column name="sifra" value="01.Z00017" />
+      <column name="naziv" value="Inženjering procesa" />
+      <column name="espb" valueNumeric="5" />
+      <column name="predavanja" valueNumeric="2" />
+      <column name="vezbe" valueNumeric="2" />
+      <column name="praktikum" valueNumeric="0" />
+      </insert>
+    <insert tableName="predmet">
+      <column name="sifra" value="01.Z00018" />
+      <column name="naziv" value="Menadžment tehnologije i razvoja" />
+      <column name="espb" valueNumeric="5" />
+      <column name="predavanja" valueNumeric="2" />
+      <column name="vezbe" valueNumeric="2" />
+      <column name="praktikum" valueNumeric="0" />
+      </insert>
+    <insert tableName="predmet">
+      <column name="sifra" value="01.Z00019" />
+      <column name="naziv" value="Osnove operacionog menadžmenta" />
+      <column name="espb" valueNumeric="5" />
+      <column name="predavanja" valueNumeric="2" />
+      <column name="vezbe" valueNumeric="2" />
+      <column name="praktikum" valueNumeric="0" />
+      </insert>
+    <insert tableName="predmet">
+      <column name="sifra" value="01.Z00020" />
+      <column name="naziv" value="Standardizacija" />
+      <column name="espb" valueNumeric="5" />
+      <column name="predavanja" valueNumeric="2" />
+      <column name="vezbe" valueNumeric="2" />
+      <column name="praktikum" valueNumeric="0" />
+      </insert>
+    <insert tableName="predmet">
+      <column name="sifra" value="01.Z00021" />
+      <column name="naziv" value="Stručna praksa" />
+      <column name="espb" valueNumeric="3" />
+      <column name="predavanja" valueNumeric="0" />
+      <column name="vezbe" valueNumeric="0" />
+      <column name="praktikum" valueNumeric="0" />
+      </insert>
+    <insert tableName="predmet">
+      <column name="sifra" value="01.Z00022" />
+      <column name="naziv" value="Završni rad" />
+      <column name="espb" valueNumeric="4" />
+      <column name="predavanja" valueNumeric="0" />
+      <column name="vezbe" valueNumeric="0" />
+      <column name="praktikum" valueNumeric="0" />
+      </insert>
+    <insert tableName="predmet">
+      <column name="sifra" value="01.Z00023" />
+      <column name="naziv" value="Predmet Završni rad" />
+      <column name="espb" valueNumeric="3" />
+      <column name="predavanja" valueNumeric="0" />
+      <column name="vezbe" valueNumeric="0" />
+      <column name="praktikum" valueNumeric="0" />
+      </insert>
+    <insert tableName="predmet">
+      <column name="sifra" value="01.ZI0001" />
+      <column name="naziv" value="Engleski jezik u menadžmentu 1" />
+      <column name="espb" valueNumeric="6" />
+      <column name="predavanja" valueNumeric="2" />
+      <column name="vezbe" valueNumeric="2" />
+      <column name="praktikum" valueNumeric="0" />
+      </insert>
+    <insert tableName="predmet">
+      <column name="sifra" value="01.ZI0002" />
+      <column name="naziv" value="Francuski jezik u menadžmentu 1" />
+      <column name="espb" valueNumeric="6" />
+      <column name="predavanja" valueNumeric="2" />
+      <column name="vezbe" valueNumeric="2" />
+      <column name="praktikum" valueNumeric="0" />
+      </insert>
+    </changeSet>
+  </databaseChangeLog>

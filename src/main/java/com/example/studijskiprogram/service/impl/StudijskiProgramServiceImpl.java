@@ -63,6 +63,7 @@ public class StudijskiProgramServiceImpl implements StudijskiProgramService {
     @Override
     @Transactional
     public StudijskiProgramDto create(StudijskiProgramDto dto) {
+        validateTotalEspb(dto);
         StudijskiProgram program = studijskiProgramDtoEntityMapper.toEntity(dto);
         if (dto.getModuli() == null) {
             program = studijskiProgramRepository.save(program);
@@ -91,6 +92,7 @@ public class StudijskiProgramServiceImpl implements StudijskiProgramService {
         if (dto.getSifra() == null || !dto.getSifra().equals(sifra)) {
             dto.setSifra(sifra);
         }
+        validateTotalEspb(dto);
         StudijskiProgram program = studijskiProgramDtoEntityMapper.toEntity(dto);
         if (dto.getModuli() != null) {
             List<ModulDto> modulDtos = dto.getModuli();
@@ -123,6 +125,8 @@ public class StudijskiProgramServiceImpl implements StudijskiProgramService {
             PlanStavkaDto planStavkaDto = modulDto.getPlanStavke().get(i);
             PlanStavka planStavka = planStavke.get(i);
             validatePlanStavka(planStavkaDto);
+            int correctedSemestar = normalizeSemestar(planStavkaDto.getSemestar(), modulDto.getGodina());
+            planStavka.setSemestar(correctedSemestar);
 
             if (planStavkaDto.getPredmetSifra() != null) {
                 Predmet predmet = predmetRepository.findById(planStavkaDto.getPredmetSifra())
@@ -150,6 +154,46 @@ public class StudijskiProgramServiceImpl implements StudijskiProgramService {
         }
         if (dto.getTip() == PlanStavkaTip.IZBORNI && !hasGrupa) {
             throw new IllegalArgumentException("Izborna plan stavka mora imati izbornu grupu.");
+        }
+    }
+
+    private int normalizeSemestar(int semestar, int godina) {
+        int safeGodina = Math.max(1, godina);
+        int minSemestar = (safeGodina - 1) * 2 + 1;
+        int maxSemestar = safeGodina * 2;
+        if (semestar < minSemestar) {
+            return minSemestar;
+        }
+        if (semestar > maxSemestar) {
+            return maxSemestar;
+        }
+        return semestar;
+    }
+
+    private void validateTotalEspb(StudijskiProgramDto dto) {
+        if (dto == null || dto.getModuli() == null) {
+            return;
+        }
+        int total = 0;
+        for (ModulDto modulDto : dto.getModuli()) {
+            if (modulDto.getPlanStavke() == null) {
+                continue;
+            }
+            for (PlanStavkaDto planStavkaDto : modulDto.getPlanStavke()) {
+                if (planStavkaDto.getTip() == PlanStavkaTip.OBAVEZAN && planStavkaDto.getPredmetSifra() != null) {
+                    Predmet predmet = predmetRepository.findById(planStavkaDto.getPredmetSifra())
+                            .orElseThrow(() -> new IllegalArgumentException("Predmet nije pronadjen: " + planStavkaDto.getPredmetSifra()));
+                    total += predmet.getEspb();
+                    continue;
+                }
+                if (planStavkaDto.getTip() == PlanStavkaTip.IZBORNI && planStavkaDto.getIzbornaGrupa() != null) {
+                    IzbornaGrupaDto grupaDto = planStavkaDto.getIzbornaGrupa();
+                    total += grupaDto.getBrojPredmeta() * grupaDto.getPotrebniEspb();
+                }
+            }
+        }
+        if (dto.getUkupnoEspb() != total) {
+            throw new IllegalArgumentException("Ukupno ESPB mora biti " + total + ".");
         }
     }
 

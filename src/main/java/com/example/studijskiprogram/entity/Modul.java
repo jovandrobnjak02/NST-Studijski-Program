@@ -30,6 +30,9 @@ public class Modul {
     @Column(nullable = false)
     private int godina;
 
+    @Column(name = "grupa_naziv", length = 255)
+    private String grupaNaziv;
+
     @ManyToOne(optional = false)
     @JoinColumn(name = "studijski_program_sifra", nullable = false)
     @JsonIgnore
@@ -41,11 +44,12 @@ public class Modul {
     public Modul() {
     }
 
-    public Modul(Long id, String naziv, String oznaka, int godina, StudijskiProgram studijskiProgram, List<PlanStavka> planStavke) {
+    public Modul(Long id, String naziv, String oznaka, int godina, String grupaNaziv, StudijskiProgram studijskiProgram, List<PlanStavka> planStavke) {
         this.id = id;
         this.naziv = naziv;
         this.oznaka = oznaka;
         this.godina = godina;
+        this.grupaNaziv = grupaNaziv;
         this.studijskiProgram = studijskiProgram;
         this.planStavke = planStavke;
     }
@@ -80,6 +84,14 @@ public class Modul {
 
     public void setGodina(int godina) {
         this.godina = godina;
+    }
+
+    public String getGrupaNaziv() {
+        return grupaNaziv;
+    }
+
+    public void setGrupaNaziv(String grupaNaziv) {
+        this.grupaNaziv = grupaNaziv;
     }
 
     public StudijskiProgram getStudijskiProgram() {

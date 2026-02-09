@@ -33,6 +33,7 @@ public class ModulDtoEntityMapper implements DtoEntityMapper<ModulDto, Modul> {
                 entity.getNaziv(),
                 entity.getOznaka(),
                 entity.getGodina(),
+                entity.getGrupaNaziv(),
                 planStavke
         );
     }
@@ -47,7 +48,15 @@ public class ModulDtoEntityMapper implements DtoEntityMapper<ModulDto, Modul> {
             return null;
         }
         List<PlanStavka> planStavke = new ArrayList<>();
-        Modul modul = new Modul(dto.getId(), dto.getNaziv(), dto.getOznaka(), dto.getGodina(), studijskiProgram, planStavke);
+        Modul modul = new Modul(
+                dto.getId(),
+                dto.getNaziv(),
+                dto.getOznaka(),
+                dto.getGodina(),
+                dto.getGrupaNaziv(),
+                studijskiProgram,
+                planStavke
+        );
         if (dto.getPlanStavke() != null) {
             for (PlanStavkaDto planStavkaDto : dto.getPlanStavke()) {
                 planStavke.add(planStavkaDtoEntityMapper.toEntity(planStavkaDto, modul));
