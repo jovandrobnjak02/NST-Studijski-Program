@@ -16,7 +16,19 @@ async function apiFetch(path, options = {}) {
     return null;
   }
 
-  return response.json();
+  const contentLength = response.headers.get("content-length");
+  if (contentLength === "0") {
+    return null;
+  }
+  const text = await response.text();
+  if (!text) {
+    return null;
+  }
+  try {
+    return JSON.parse(text);
+  } catch (err) {
+    throw new Error("Neispravan JSON u odgovoru servera.");
+  }
 }
 
 function qs(name) {
